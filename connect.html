@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Connect | Black Audience Marketplace</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .logo img {
+        max-width: 200px !important;
+      }
+      .contact-form-bam {
+        background: rgba(255,255,255,0.05);
+        padding: 60px;
+        border-radius: 20px;
+        border: 1px solid rgba(252, 219, 102, 0.1);
+      }
+      .form-group label {
+        color: var(--theme-color1);
+        margin-bottom: 10px;
+        font-weight: 600;
+        display: block;
+      }
+      .form-control {
+        background: #111 !important;
+        border: 1px solid #333 !important;
+        color: #fff !important;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+      .form-control:focus {
+        border-color: var(--theme-color1) !important;
+      }
+      select.form-control {
+        color: #999 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+
+    <!-- Preloader start -->
+    <div class="preloader">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="preloader-heading">
+            <div class="load-text">
+            <span>B</span>
+            <span>A</span>
+            <span>M</span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back-to-top start -->
+      <div class="back-to-top-wrapper">
+          <button id="back_to_top" type="button" class="back-to-top-btn">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+          </button>
+      </div>
+      <!-- Back-to-top start -->
+
+      <!-- Main Header-->
+      <header class="main-header">
+        <div class="header-lower">
+          <div class="main-box">
+            <div class="logo-box">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo/bam-logo-transparent.png" alt="BAM"></a>
+              </div>
+            </div>
+            <div class="nav-outer">
+              <nav class="nav main-menu">
+                <ul class="navigation">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="marketplace.html">The Marketplace</a></li>
+                  <li><a href="report.html">Global Diaspora Report</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li class="current"><a href="connect.html">Connect</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Section 1: Let's Connect -->
+      <section class="section-padding" style="padding-top: 200px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center wow fadeInUp">
+              <h1 style="font-size: 64px; margin-bottom: 20px;">Let’s Connect</h1>
+              <p style="font-size: 20px; color: #a1a1a1; margin-bottom: 50px;">Whether you’re looking to access the marketplace, explore partnership opportunities, or learn more about our approach, share a bit of context below and our team will follow up.</p>
+
+              <div class="contact-form-bam text-start">
+                <form id="bamConnectForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Company</label>
+                        <input type="text" id="company" name="company" class="form-control" placeholder="Your Company" required>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>What brings you here?</label>
+                        <select id="interest" name="interest" class="form-control" required>
+                           <option value="">Select an option...</option>
+                           <option value="Marketplace Access">Access the BAM Marketplace (media buying)</option>
+                           <option value="Partnership">Explore partnership opportunities (publishers/platforms)</option>
+                           <option value="Research">Research & insights inquiries</option>
+                           <option value="General">General inquiry</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Tell us more</label>
+                        <textarea id="message" name="message" class="form-control" style="height: 150px;" placeholder="Briefly share your goals, timeline, or what you're looking to achieve."></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Estimated Monthly Media Budget (optional)</label>
+                        <select id="budget" name="budget" class="form-control">
+                           <option value="">Select budget range...</option>
+                           <option><$50K</option>
+                           <option>$50K–$250K</option>
+                           <option>$250K–$1M</option>
+                           <option>$1M+</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mt-4 text-center">
+                      <button type="submit" id="submitBtn" class="theme-btn-main">
+                        <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span id="btnText" class="theme-btn theme-bg theme-color-white">Request Access</span>
+                        <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div id="formResponse" class="mt-4 text-center" style="display: none;"></div>
+                <div class="mt-5 text-center">
+                  <p style="color: #666;">Prefer to reach out directly? <a href="mailto:sales@blackaudiencemarketplace.com" class="color1">sales@blackaudiencemarketplace.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <div class="widgets-section">
+          <div class="auto-container">
+            <div class="row">
+              <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="footer-widget about-widget">
+                  <div class="logo">
+                    <a href="index.html"><img src="images/logo/bam-logo-transparent.png" alt="BAM"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="auto-container text-center">
+            <div class="copyright-text">© 2026 Black Audience Marketplace . All rights reserved.</div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#bamConnectForm').on('submit', function(e) {
+          e.preventDefault();
+
+          const $btn = $('#submitBtn');
+          const $btnText = $('#btnText');
+          const $response = $('#formResponse');
+
+          // Disable button and show loading state
+          $btn.prop('disabled', true);
+          $btnText.text('Sending...');
+          $response.hide().removeClass('alert-success alert-danger');
+
+          const formData = {
+            timestamp: new Date().toISOString(),
+            type: 'Connect Inquiry',
+            firstName: $('#name').val(), // Mapping name to firstName for script compatibility
+            email: $('#email').val(),
+            company: $('#company').val(),
+            interest: $('#interest').val(),
+            message: $('#message').val() + ( $('#budget').val() ? '\n\nBudget: ' + $('#budget').val() : '' )
+          };
+
+          // Replace with your actual Google Apps Script Web App URL
+          const scriptUrl = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE';
+
+          if (scriptUrl === 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE') {
+            $response.show().addClass('alert alert-warning').text('Development Note: Please configure the Google Apps Script URL in connect.html');
+            $btn.prop('disabled', false);
+            $btnText.text('Request Access');
+            return;
+          }
+
+          $.ajax({
+            url: scriptUrl,
+            method: 'POST',
+            contentType: 'text/plain; charset=utf-8',
+            data: JSON.stringify(formData),
+            success: function(response) {
+              $response.show().addClass('alert alert-success').text('Thank you! Your inquiry has been received. Our team will follow up shortly.');
+              $('#bamConnectForm')[0].reset();
+              $btnText.text('Request Access');
+              $btn.prop('disabled', false);
+            },
+            error: function(err) {
+              $response.show().addClass('alert alert-danger').text('There was an error submitting the form. Please try again or email us directly.');
+              $btn.prop('disabled', false);
+              $btnText.text('Request Access');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
