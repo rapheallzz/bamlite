@@ -74,13 +74,15 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     color: var(--theme-color1);
 }
 
-/* Fix Hero Email Overlap - Relocate to Bottom Right */
+/* Fix Hero Email Overlap - Relocate to Bottom Right (Above Social Icons) */
 .banner-section .email-link {
     top: auto !important;
-    bottom: 40px !important;
+    bottom: 110px !important;
     left: auto !important;
-    right: 40px !important;
+    right: 50px !important;
     transform: none !important;
+    z-index: 10;
+    line-height: 1;
 }
 
 .banner-section .email-link a {
@@ -89,6 +91,11 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 600;
+    color: var(--theme-color-white);
+}
+
+.banner-section .email-link a:hover {
+    color: var(--theme-color1);
 }
 
 .banner-section .email-line {
@@ -99,4 +106,15 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     .banner-section .email-link {
         display: none; /* Hide on smaller screens to keep UI clean */
     }
+}
+
+/* Fix Global Horizontal Scroll */
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.page-wrapper {
+    overflow-x: hidden !important;
 }
