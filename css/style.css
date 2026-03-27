@@ -15,6 +15,7 @@ License: copyright commercial
 8.  Banner Section / Two
 9.  About Section / Two
 **********************************************/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap");
 @import url("animate.css");
 @import url("swiper.min.css");
@@ -54,8 +55,8 @@ License: copyright commercial
   --headings-color: #fff;
   --link-color: #352f27;
   --link-hover-color: #5b8c51;
-  --body-font-family: "Noto Sans", sans-serif;
-  --heading-font-family: "Plus Jakarta Sans", sans-serif;
+  --body-font-family: "League Spartan", sans-serif;
+  --heading-font-family: "League Spartan", sans-serif;
   --body-font-size: 16px;
   --body-line-height: 1.8;
   --body-font-weight: 400;

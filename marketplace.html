@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Marketplace | Black Audience Marketplace</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .logo img {
+        max-width: 200px !important;
+      }
+      .pillar-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(252, 219, 102, 0.2);
+        height: 100%;
+        transition: 0.3s;
+      }
+      .pillar-card:hover {
+        border-color: var(--theme-color1);
+        transform: translateY(-10px);
+      }
+      .pillar-footer {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-weight: 600;
+        color: var(--theme-color1);
+      }
+      .marketplace-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover;
+        background-position: center;
+        padding: 200px 0 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+
+    <!-- Preloader start -->
+    <div class="preloader">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="preloader-heading">
+            <div class="load-text">
+            <span>B</span>
+            <span>A</span>
+            <span>M</span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back-to-top start -->
+      <div class="back-to-top-wrapper">
+          <button id="back_to_top" type="button" class="back-to-top-btn">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+          </button>
+      </div>
+      <!-- Back-to-top start -->
+
+      <!-- Main Header-->
+      <header class="main-header">
+        <div class="header-lower">
+          <div class="main-box">
+            <div class="logo-box">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo/bam-logo-transparent.png" alt="BAM" title="Black Audience Marketplace"></a>
+              </div>
+            </div>
+            <div class="nav-outer">
+              <nav class="nav main-menu">
+                <ul class="navigation">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="current"><a href="marketplace.html">The Marketplace</a></li>
+                  <li><a href="report.html">Global Diaspora Report</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="connect.html">Connect</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="outer-box">
+              <div class="header-btn d-none d-xxl-block">
+                <a class="header-btn-main" href="connect.html">
+                  <span class="header-theme-btn">Get Started</span>
+                  <span class="header-btn-arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Section 1: Hero -->
+      <section class="marketplace-hero text-center">
+        <div class="container">
+          <h1 class="title wow fadeInUp" style="font-size: 72px; color: #fff;">The Marketplace</h1>
+          <p class="wow fadeInUp color1" data-wow-delay=".2s" style="font-size: 28px; font-weight: 600;">Programmatic Infrastructure for Black Streaming Audiences</p>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <p class="wow fadeInUp" data-wow-delay=".4s" style="color: #fff; font-size: 20px; margin: 30px 0;">BAM is not a traditional DSP or media vendor. It is a curated programmatic marketplace designed to enable disciplined, scalable transactions against Black audiences across CTV, FAST, and linear environments.</p>
+              <a class="theme-btn-main wow fadeInUp" data-wow-delay=".6s" href="connect.html">
+                <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
+                <span class="theme-btn theme-bg theme-color-white">Schedule A Meeting</span>
+                <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Built for How Television Buying Actually Works -->
+      <section class="section-padding bg-dark">
+        <div class="container text-center">
+          <div class="sec-title wow fadeInUp">
+            <h2 class="text-reveal-anim">Built for How Television Buying Actually Works</h2>
+          </div>
+          <p class="mx-auto wow fadeInUp" style="font-size: 22px; width: 75%; color: #a1a1a1;">Modern streaming requires more than access—it requires structure, control, and clarity. BAM is designed to operate with the rigor of television buying while unlocking the flexibility of programmatic execution.</p>
+        </div>
+      </section>
+
+      <!-- Section 3: Agencies Can Access BAM in Three Ways -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="sec-title text-center wow fadeInUp">
+            <h2>Agencies Can Access BAM in Three Ways</h2>
+          </div>
+          <div class="row g-4">
+            <!-- Pillar 1 -->
+            <div class="col-lg-4 wow fadeInUp">
+              <div class="pillar-card">
+                <h3 class="color1">Curated PMP Access</h3>
+                <ul class="list-style-two">
+                  <li><i class="fa fa-circle"></i> Pre-structured PMP deals across premium Black-owned publishers.</li>
+                  <li><i class="fa fa-circle"></i> Guaranteed access to curated supply.</li>
+                  <li><i class="fa fa-circle"></i> Inventory packaged for scale and consistency.</li>
+                  <li><i class="fa fa-circle"></i> Designed for immediate activation.</li>
+                </ul>
+                <div class="pillar-footer text-uppercase">Immediate Activation</div>
+              </div>
+            </div>
+            <!-- Pillar 2 -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="pillar-card">
+                <h3 class="color1">Self-Service Platform Access</h3>
+                <ul class="list-style-two">
+                  <li><i class="fa fa-circle"></i> For agencies with internal trading teams.</li>
+                  <li><i class="fa fa-circle"></i> Full platform control & PG inventory.</li>
+                  <li><i class="fa fa-circle"></i> Direct supply integrations.</li>
+                  <li><i class="fa fa-circle"></i> Advanced targeting & retargeting.</li>
+                  <li><i class="fa fa-circle"></i> CTV, mobile, web, DOOH activation.</li>
+                </ul>
+                <div class="pillar-footer text-uppercase">Infrastructure without external dependency.</div>
+              </div>
+            </div>
+            <!-- Pillar 3 -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="pillar-card">
+                <h3 class="color1">Managed Execution</h3>
+                <ul class="list-style-two">
+                  <li><i class="fa fa-circle"></i> For agencies seeking execution without internal overhead.</li>
+                  <li><i class="fa fa-circle"></i> Campaign setup & optimization.</li>
+                  <li><i class="fa fa-circle"></i> PMP & PG deal structuring.</li>
+                  <li><i class="fa fa-circle"></i> Broadcaster coordination.</li>
+                  <li><i class="fa fa-circle"></i> DSP Activation & Reporting.</li>
+                </ul>
+                <div class="pillar-footer text-uppercase">Institutional execution without internal overhead.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Why BAM -->
+      <section class="section-padding bg-dark">
+        <div class="container">
+          <div class="sec-title text-center wow fadeInUp">
+            <h2>Why BAM</h2>
+          </div>
+          <div class="row g-4 justify-content-center text-center">
+            <div class="col-md-3"><div class="pillar-card py-4"><h4>Curated, not open exchange</h4></div></div>
+            <div class="col-md-3"><div class="pillar-card py-4"><h4>Built for CTV-first environments</h4></div></div>
+            <div class="col-md-3"><div class="pillar-card py-4"><h4>Aligned to real audience behavior</h4></div></div>
+            <div class="col-md-3"><div class="pillar-card py-4"><h4>Designed for allocation—not targeting</h4></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Cross Platform Capabilities -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 wow fadeInLeft">
+              <div class="sec-title">
+                <h2>Cross Platform Capabilities</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-style-two">
+                    <li><i class="fa fa-check"></i> CTV</li>
+                    <li><i class="fa fa-check"></i> Mobile</li>
+                    <li><i class="fa fa-check"></i> Web & Display</li>
+                    <li><i class="fa fa-check"></i> Digital Out of Home</li>
+                    <li><i class="fa fa-check"></i> Direct Broadcaster PMPs</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-style-two">
+                    <li><i class="fa fa-check"></i> YouTube & YouTube TV</li>
+                    <li><i class="fa fa-check"></i> Netflix Inventory Pathways</li>
+                    <li><i class="fa fa-check"></i> Peer39 Contextual</li>
+                    <li><i class="fa fa-check"></i> Third Party Measurement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight text-center">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600" alt="Mobile Phone Visual" style="max-width: 350px; border: 8px solid #222; border-radius: 40px; box-shadow: 0 0 50px rgba(252, 219, 102, 0.2);">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Built on Advanced Programmatic Infrastructure -->
+      <section class="section-padding bg-dark text-center">
+        <div class="container">
+          <h2 class="wow fadeInUp">Built on Advanced Programmatic Infrastructure</h2>
+          <p class="wow fadeInUp mt-4" style="font-size: 20px;">BAM operates in partnership with leading programmatic and supply-side infrastructure, ensuring scalable, transparent, and efficient media transactions.</p>
+          <div class="mt-5 wow fadeInUp">
+             <a class="theme-btn-main" href="connect.html">
+                <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
+                <span class="theme-btn theme-bg theme-color-white">Request Partnership Info</span>
+                <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <div class="widgets-section">
+          <div class="auto-container">
+            <div class="row">
+              <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="footer-widget about-widget">
+                  <div class="logo">
+                    <a href="index.html"><img src="images/logo/bam-logo-transparent.png" alt="BAM"></a>
+                  </div>
+                  <p class="footer-des">Media Buying for Black Viewers. Built for the Now.</p>
+                </div>
+              </div>
+              <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget">
+                  <h5 class="widget-title">Navigation</h5>
+                  <ul class="user-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">The Marketplace</a></li>
+                    <li><a href="report.html">Global Diaspora Report</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="footer-widget contact-widget">
+                  <h5 class="widget-title">Partnership</h5>
+                  <div class="widget-content">
+                    <p style="color: #fff;">BAM operates in partnership with Kodiak Media Group and TVIQ.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="auto-container">
+            <div class="copyright-text text-center">© 2026 Black Audience Marketplace . All rights reserved.</div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
