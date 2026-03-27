@@ -195,3 +195,25 @@ html, body {
         max-height: 80px !important;
     }
 }
+
+/* Right-align navigation menu in main header */
+.main-header .main-box {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.main-header .nav-outer {
+    margin-left: auto !important;
+    text-align: right !important;
+}
+
+.main-header .main-menu .navigation {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.main-header .main-menu .navigation > li {
+    float: none !important; /* Override float-based layout */
+}
