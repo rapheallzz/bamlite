@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Black Audience Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendors.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
+            background-size: cover;
+            padding: 180px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        .leadership-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            height: 100%;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 4px;
+        }
+        .leadership-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 15px var(--accent-gold-glow);
+        }
+        .leadership-card h3 {
+            color: var(--accent-gold);
+            font-size: 28px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .leadership-card .title {
+            color: var(--text-secondary);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .pattern-bg {
+            background-image: radial-gradient(var(--accent-gold) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="pattern-bg"></div>
+
+<div class="nav-container">
+    <div class="uk-container">
+        <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+            <div class="uk-navbar-left">
+                <a href="index.html" class="uk-navbar-item uk-logo">
+                    <img src="assets/img/logo.png" alt="Black Audience Marketplace" class="logo-img">
+                </a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@m">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">The Marketplace</a></li>
+                    <li><a href="report.html">Global Diaspora Report</a></li>
+                    <li class="uk-active"><a href="about.html">About</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+                <a class="uk-navbar-toggle uk-hidden@m" data-uk-navbar-toggle-icon href="#" data-uk-toggle="target: #offcanvas-nav"></a>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">The Marketplace</a></li>
+            <li><a href="report.html">Global Diaspora Report</a></li>
+            <li class="uk-active"><a href="about.html">About</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Section 1: Building the Future -->
+<section class="about-hero">
+    <div class="grid-bg"></div>
+    <div class="uk-container" style="position: relative; z-index: 1;">
+        <div class="uk-grid uk-flex-middle" data-uk-grid>
+            <div class="uk-width-2-3@m">
+                <h1 class="hero-title">Building the Future of Black Audience Advertising</h1>
+                <p class="uk-text-large">BAM was created to address a fundamental gap in media: Black audiences lead in streaming behavior, yet remain underrepresented in how media investment is allocated.</p>
+                <p>We provide structured, programmatic access to verified Black audiences—enabling advertisers to transact with greater precision while ensuring publishers are properly represented within the media ecosystem.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Leadership - Barbara Shaibu -->
+<section class="section-padding" style="position: relative;">
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-large" data-uk-grid>
+            <div class="uk-width-1-3@m reveal reveal-left">
+                <div class="uk-cover-container" style="height: 400px; border: 1px solid var(--glass-border); border-radius: 4px; box-shadow: 0 0 30px rgba(0,0,0,0.5);">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Barbara Shaibu" data-uk-cover>
+                </div>
+            </div>
+            <div class="uk-width-2-3@m reveal reveal-right">
+                <div class="leadership-card">
+                    <h3>Barbara Shaibu</h3>
+                    <span class="title">Founder, Black Audience Marketplace (BAM) | Principal, Békwu Consults</span>
+                    <p>Barbara Shaibu is a strategic media executive and sales innovator who has spent more than a decade bridging audience insights, cultural intelligence, and ad-tech performance to drive measurable growth.</p>
+                    <p>As the Founder of Black Audience Marketplace (BAM) and Principal at Békwu Consults, Barbara leads a new movement in programmatic equity—connecting advertisers to verified Black audiences through data-driven, transparent, and scalable media execution.</p>
+                    <p>Before founding Békwu, Barbara spent over a decade at BET Networks and Nielsen, where she advised on $100MM+ portfolios, developed strategic research frameworks, and helped major networks and advertisers translate data into market growth.</p>
+                    <p>Known for her ability to turn complex analytics into compelling sales narratives, she has built a reputation for aligning culture and commerce—helping media brands and marketers better reach, value, and invest in the audiences that shape global influence.</p>
+                    <p>Barbara is driven by a simple belief: when cultural data meets commercial accountability, representation becomes measurable—and monetizable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Leadership - Geoff Kowalski -->
+<section class="section-padding bg-dark-alt" style="position: relative;">
+    <div class="grid-bg"></div>
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-large uk-flex-row-reverse" data-uk-grid>
+            <div class="uk-width-1-3@m reveal reveal-right">
+                <div class="uk-cover-container" style="height: 400px; border: 1px solid var(--glass-border); border-radius: 4px; box-shadow: 0 0 30px rgba(0,0,0,0.5);">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" alt="Geoff Kowalski" data-uk-cover>
+                </div>
+            </div>
+            <div class="uk-width-2-3@m reveal reveal-left">
+                <div class="leadership-card">
+                    <h3>Geoff Kowalski</h3>
+                    <span class="title">CTV Monetization & Programmatic Infrastructure Partner</span>
+                    <p>Geoff Kowalski is the Founder of Kodiak Media Group and a cross-platform media operator with over a decade of experience building programmatic infrastructure and driving revenue across broadcast, syndication, OTT, and digital video.</p>
+                    <p>He also serves as Chief Revenue Officer at On The Spot Media (OTSM), where he leads revenue strategy, ad delivery systems, and cross-platform operations supporting large-scale media distribution. His work spans FAST channel monetization, supply-side infrastructure, and end-to-end CTV execution.</p>
+                    <p>Through Kodiak Media Group, Geoff supports BAM’s marketplace infrastructure—enabling scalable access, efficient supply paths, and programmatic execution across streaming environments.</p>
+                    <p>Geoff is a trusted partner to networks, studios, agencies, and publishers navigating the evolving CTV and programmatic landscape.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Partners -->
+<section class="section-padding">
+    <div class="uk-container uk-text-center">
+        <div class="uk-grid uk-child-width-1-4@m uk-flex-middle uk-flex-center" data-uk-grid>
+            <div><h3 style="color: #666; font-size: 24px;">Kodiak Media Group</h3></div>
+            <div><h3 style="color: #666; font-size: 24px;">TVIQ</h3></div>
+        </div>
+        <p class="uk-text-small uk-margin-large-top" style="color: #666;">BAM operates in partnership with Kodiak Media Group and TVIQ.</p>
+    </div>
+</section>
+
+<footer class="footer-line">
+    <div class="uk-container">
+        <div class="uk-grid uk-child-width-1-3@m" data-uk-grid>
+            <div class="uk-text-left@m uk-text-center">
+                <img src="assets/img/logo.png" alt="BAM" class="logo-img uk-margin-small-bottom">
+                <p class="uk-text-small">Built for the Now. Curated programmatic access to Black streaming audiences.</p>
+            </div>
+            <div class="uk-text-center">
+                <ul class="uk-list uk-text-small">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">The Marketplace</a></li>
+                    <li><a href="report.html">Global Diaspora Report</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+            </div>
+            <div class="uk-text-right@m uk-text-center">
+                <p class="uk-text-small">© 2026 Black Audience Marketplace.<br>All Rights Reserved.</p>
+                <p class="uk-text-small" style="color: #666;">BAM operates in partnership with Kodiak Media Group and TVIQ.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/vendors.min.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
