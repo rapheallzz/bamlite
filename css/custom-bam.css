@@ -73,3 +73,17 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     text-transform: uppercase;
     color: var(--theme-color1);
 }
+
+/* Fix Hero Email Overlap */
+.banner-section .email-link {
+    top: 75% !important; /* Move it lower to avoid overlap with long subtext */
+}
+
+@media (max-width: 1400px) {
+    .banner-section .email-link {
+        display: none; /* Hide on smaller screens where overlap is inevitable */
+    }
+    .banner-section .email-line {
+        display: none;
+    }
+}
