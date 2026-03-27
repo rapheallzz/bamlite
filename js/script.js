@@ -1262,12 +1262,13 @@ var THEMEMASCOT = {};
 			function () {
 				var $t = $(this),
 					n = $t.find(".count-text").attr("data-stop"),
-					r = parseInt($t.find(".count-text").attr("data-speed"), 10);
+					r = parseInt($t.find(".count-text").attr("data-speed"), 10),
+          decimals = parseInt($t.find(".count-text").attr("data-decimals"), 10) || 0;
 
 				if (!$t.hasClass("counted")) {
 					$t.addClass("counted");
 					$({
-						countNum: $t.find(".count-text").text(),
+						countNum: parseFloat($t.find(".count-text").text()),
 					}).animate(
 						{
 							countNum: n,
@@ -1276,10 +1277,12 @@ var THEMEMASCOT = {};
 							duration: r,
 							easing: "linear",
 							step: function () {
-								$t.find(".count-text").text(Math.floor(this.countNum));
+                var fixedNum = decimals > 0 ? this.countNum.toFixed(decimals) : Math.floor(this.countNum);
+								$t.find(".count-text").text(fixedNum);
 							},
 							complete: function () {
-								$t.find(".count-text").text(this.countNum);
+                var finalNum = decimals > 0 ? parseFloat(n).toFixed(decimals) : n;
+								$t.find(".count-text").text(finalNum);
 							},
 						}
 					);
