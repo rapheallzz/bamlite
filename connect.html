@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Connect | Black Audience Marketplace</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/custom-bam.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader">
+            <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+            </svg>
+            <div class="preloader-heading">
+                <div class="load-text">
+                    <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-lower">
+                <div class="main-box">
+                    <div class="logo-box">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/BAM Logo Kit/BAM Logo Kit/BAM Logo - Transparent.png" alt="BAM" title="Black Audience Marketplace"></a>
+                        </div>
+                    </div>
+                    <div class="nav-outer">
+                        <nav class="nav main-menu">
+                            <ul class="navigation">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="marketplace.html">The Marketplace</a></li>
+                                <li><a href="report.html">Global Diaspora Report</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="current"><a href="connect.html">Connect</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="outer-box">
+                        <div class="header-btn d-none d-xxl-block">
+                            <a class="header-btn-main" href="connect.html">
+                                <span class="header-theme-btn">Request Access</span>
+                                <span class="header-btn-arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                        <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sticky Header -->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/BAM Logo Kit/BAM Logo Kit/BAM Logo - Transparent.png" alt="" style="max-height: 50px;"></a>
+                        </div>
+                        <div class="nav-outer">
+                            <nav class="main-menu">
+                                <div class="navbar-collapse show collapse clearfix">
+                                    <ul class="navigation clearfix"></ul>
+                                </div>
+                            </nav>
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Title -->
+        <section class="page-title" style="background-image: url(images/main-home/hero-bg.jpg);">
+            <div class="auto-container">
+                <div class="title-outer text-center">
+                    <h1 class="title">Let’s Connect</h1>
+                    <ul class="page-breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Connect</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Form Section -->
+        <section class="contact-section py-5">
+            <div class="auto-container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="sec-title text-center mb-5">
+                            <h2 class="text-white">Let’s Connect</h2>
+                            <p class="text-white opacity-75 mt-3">Whether you’re looking to access the marketplace, explore partnership opportunities, or learn more about our approach, share a bit of context below and our team will follow up.</p>
+                        </div>
+
+                        <div class="contact-forms wow fadeInUp bg-dark-alt p-5 rounded">
+                            <form id="connect-form" method="post">
+                                <div class="row">
+                                    <div class="form-group col-md-6 mb-3">
+                                        <label class="text-white small mb-2">Name *</label>
+                                        <input type="text" name="name" placeholder="Your Name" required class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6 mb-3">
+                                        <label class="text-white small mb-2">Company *</label>
+                                        <input type="text" name="company" placeholder="Your Company" required class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-12 mb-3">
+                                        <label class="text-white small mb-2">Email Address *</label>
+                                        <input type="email" name="email" placeholder="email@company.com" required class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-12 mb-3">
+                                        <label class="text-white small mb-2">What brings you here? *</label>
+                                        <select name="reason" required class="form-control" style="background-color: #1a1a1a; color: #686a6f; border: 1px solid #222222;">
+                                            <option value="">Select an option...</option>
+                                            <option value="access">Access the BAM Marketplace (media buying)</option>
+                                            <option value="partnership">Explore partnership opportunities (publishers/platforms)</option>
+                                            <option value="insights">Research & insights inquiries</option>
+                                            <option value="general">General inquiry</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-12 mb-3">
+                                        <label class="text-white small mb-2">Tell us more *</label>
+                                        <textarea name="message" rows="5" placeholder="Briefly share your goals, timeline, or what you're looking to achieve." required class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-12 mb-4">
+                                        <label class="text-white small mb-2">Estimated Monthly Media Budget (optional)</label>
+                                        <select name="budget" class="form-control" style="background-color: #1a1a1a; color: #686a6f; border: 1px solid #222222;">
+                                            <option value="">Select budget range...</option>
+                                            <option value="<50k"><$50K</option>
+                                            <option value="50k-250k">$50K–$250K</option>
+                                            <option value="250k-1m">$250K–$1M</option>
+                                            <option value="1m+">$1M+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="theme-btn-main">
+                                            <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
+                                            <span class="theme-btn theme-bg theme-color-white">Request Access</span>
+                                            <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="form-message" class="mt-4 text-center" style="display:none;">
+                                <h3 class="text-white">Inquiry Submitted</h3>
+                                <p class="text-white">Thank you for reaching out. A member of our team will follow up with you shortly.</p>
+                            </div>
+
+                            <div class="mt-5 text-center pt-4 border-top border-secondary">
+                                <p class="text-white opacity-50 mb-1">Prefer to reach out directly?</p>
+                                <a href="mailto:sales@blackaudiencemarketplace.com" class="text-gold font-weight-bold" style="color: var(--theme-color1); font-size: 1.2rem;">sales@blackaudiencemarketplace.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer bg-cover" style="background-image: url('images/home-1/footer-bg.jpg');">
+            <div class="widgets-section">
+                <div class="auto-container">
+                    <div class="row">
+                        <div class="footer-upper col-lg-12">
+                            <h2 class="footer-title">LET’S — DISCUSS <br>YOUR GOALS</h2>
+                            <div class="footer-icon"><img src="images/BAM Logo Kit/BAM Logo Kit/BAM Logo Square.png" alt="" style="max-height: 100px;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="footer-widget about-widget">
+                                <div class="logo">
+                                    <a href="index.html"><img src="images/BAM Logo Kit/BAM Logo Kit/BAM Logo - Transparent.png" alt="img"></a>
+                                </div>
+                                <p class="footer-des">Media Buying for Black Viewers. Built for the Now. Curated programmatic access to Black streaming audiences.</p>
+                            </div>
+                        </div>
+                        <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-widget">
+                                <h5 class="widget-title">Navigation</h5>
+                                <ul class="user-links">
+                                    <li><a href="index.html">Home <i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="marketplace.html">The Marketplace <i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="report.html">Global Diaspora Report <i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="about.html">About <i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="connect.html">Connect <i class="fa-solid fa-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-column col-xl-5 col-lg-5 col-md-6 col-sm-12">
+                            <div class="footer-widget contact-widget">
+                                <h5 class="widget-title">Contact Us</h5>
+                                <div class="widget-content">
+                                    <div class="address">
+                                        <p>Send E-Mail</p>
+                                        <a href="mailto:sales@blackaudiencemarketplace.com">sales@blackaudiencemarketplace.com</a>
+                                    </div>
+                                    <div class="address mt-4">
+                                        <p class="text-white small">BAM operates in partnership with Kodiak Media Group and TVIQ.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="copyright-text">© Black Audience Marketplace 2026 . All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLFS5KUUReSXVdp_wSKkfkATNkLWhsENxJJ19Gk12HDUkSKc1LIdhshVKpO5A-52uZrA/exec';
+
+            $('#connect-form').on('submit', function(e) {
+                e.preventDefault();
+                const $form = $(this);
+                const $btn = $form.find('button');
+                $btn.prop('disabled', true).css('opacity', '0.5');
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+                data.timestamp = new Date().toISOString();
+                data.type = "connect";
+
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                }).then(() => {
+                    $form.fadeOut(function() {
+                        $('#form-message').fadeIn();
+                    });
+                }).catch(err => {
+                    console.error('Error:', err);
+                    $form.fadeOut(function() {
+                        $('#form-message').fadeIn();
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

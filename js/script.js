@@ -54,6 +54,12 @@ var THEMEMASCOT = {};
       $(".preloader").delay(200).fadeOut(500);
     }
   }
+  // Safety timeout for preloader
+  setTimeout(function() {
+      if ($(".preloader").is(":visible")) {
+          $(".preloader").fadeOut(500);
+      }
+  }, 3000);
   $(document).ready(function () {
     $(".preloader-loaded").addClass("loaded");
     if ($(".preloader-loaded").hasClass("loaded")) {

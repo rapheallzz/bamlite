@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+  --heading-font-family: 'League Spartan', sans-serif;
+  --sec-title-font-family: 'League Spartan', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
+    font-family: 'League Spartan', sans-serif !important;
+}
+
+/* Unified Logo Filter (Gold-ish White) */
+.unified-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.unified-logo:hover {
+    opacity: 1;
+    filter: brightness(0) invert(88%) sepia(29%) saturate(718%) hue-rotate(339deg) brightness(101%) contrast(98%); /* Approximation of gold #fcdb66 */
+}
+
+/* Custom stats styles */
+.bam-stat-box {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(252, 219, 102, 0.2);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.bam-stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--theme-color1);
+    display: block;
+}
+
+.bam-stat-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Pillar Cards */
+.pillar-card {
+    padding: 40px;
+    background: #1a1a1a;
+    border: 1px solid #222;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+    border-color: var(--theme-color1);
+    transform: translateY(-10px);
+}
+
+.pillar-card h3 {
+    color: var(--theme-color1);
+    margin-bottom: 20px;
+}
+
+.pillar-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--theme-color1);
+}
