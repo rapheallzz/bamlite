@@ -161,23 +161,37 @@ html, body {
 }
 
 /* Logo Sizing */
-.main-header .logo img {
-    max-height: 50px; /* Standardize main header logo */
-    width: auto;
-}
-
+.main-header .logo img,
 .sticky-header .logo img {
-    max-height: 70px !important; /* Larger sticky logo as requested */
+    max-height: 110px !important; /* Larger logo globally as requested (110px as discussed) */
     width: auto;
     transition: all 0.3s ease;
+}
+
+.main-header .header-lower,
+.sticky-header .inner-container {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 .sticky-header.fixed-header {
     padding: 5px 0;
 }
 
-.sticky-header .inner-container {
-    padding: 0;
-    display: flex;
-    align-items: center;
+/* Adjust mobile and tablet logo sizing for better fit */
+@media (max-width: 991px) {
+    .main-header .logo img,
+    .sticky-header .logo img,
+    .mobile-menu .nav-logo img {
+        max-height: 80px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-header .logo img,
+    .sticky-header .logo img,
+    .mobile-menu .nav-logo img {
+        max-height: 60px !important;
+    }
 }
