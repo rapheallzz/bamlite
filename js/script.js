@@ -54,6 +54,14 @@ var THEMEMASCOT = {};
       $(".preloader").delay(200).fadeOut(500);
     }
   }
+
+  // Preloader safety timeout
+  if ($(".preloader").length) {
+    setTimeout(function() {
+      handlePreloader();
+    }, 3000);
+  }
+
   $(document).ready(function () {
     $(".preloader-loaded").addClass("loaded");
     if ($(".preloader-loaded").hasClass("loaded")) {
