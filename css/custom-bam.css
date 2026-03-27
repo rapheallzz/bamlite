@@ -74,47 +74,110 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     color: var(--theme-color1);
 }
 
-/* Fix Hero Email Overlap - Relocate to Bottom Right (Above Social Icons) */
-.banner-section .email-link {
-    top: auto !important;
-    bottom: 110px !important;
-    left: auto !important;
-    right: 50px !important;
-    transform: none !important;
+/* Fix Hero Email Overlap - Relocate to Bottom Right (Aligned with Social Icons) */
+.hero-bottom-info {
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
     z-index: 10;
-    line-height: 1;
 }
 
-.banner-section .email-link a {
+.hero-bottom-info .email-link {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.hero-bottom-info .email-link a {
     transform: none !important;
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 600;
     color: var(--theme-color-white);
+    white-space: nowrap;
 }
 
-.banner-section .email-link a:hover {
+.hero-bottom-info .email-link a:hover {
     color: var(--theme-color1);
 }
 
+.hero-bottom-info .follow-us {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    display: flex;
+    align-items: center;
+}
+
 .banner-section .email-line {
-    display: none !important; /* Line shape is usually attached to the side position */
+    display: none !important;
 }
 
 @media (max-width: 1199px) {
-    .banner-section .email-link {
-        display: none; /* Hide on smaller screens to keep UI clean */
+    .hero-bottom-info {
+        right: 30px;
+        gap: 20px;
+    }
+    .hero-bottom-info .email-link {
+        display: none; /* Hide email on smaller screens to prevent crowding */
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-bottom-info {
+        display: none; /* Hide everything if it still crowds on mobile */
     }
 }
 
 /* Fix Global Horizontal Scroll */
 html, body {
-    overflow-x: hidden;
+    overflow-x: clip; /* Prefer clip over hidden if supported, but hidden is safer for compatibility */
     position: relative;
     width: 100%;
 }
 
 .page-wrapper {
-    overflow-x: hidden !important;
+    overflow: clip; /* Use clip to prevent horizontal scroll while allowing sticky elements to work if any */
+}
+
+/* Ensure no element accidentally causes overflow */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Re-allow overflow for specific elements that need it (like tooltips or absolute positioned deco if any) */
+.container, .container-fluid, .row {
+    max-width: none;
+}
+
+/* Logo Sizing */
+.main-header .logo img {
+    max-height: 50px; /* Standardize main header logo */
+    width: auto;
+}
+
+.sticky-header .logo img {
+    max-height: 70px !important; /* Larger sticky logo as requested */
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.sticky-header.fixed-header {
+    padding: 5px 0;
+}
+
+.sticky-header .inner-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
