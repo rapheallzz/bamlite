@@ -232,3 +232,8 @@ html, body {
 .main-header .main-menu .navigation > li {
     float: none !important; /* Override float-based layout */
 }
+
+/* Fix text touching top border in mission-list-item (The CTV Investment Gap section) */
+.mission-list-item .sec-title h2 {
+    margin-top: 0 !important;
+}
