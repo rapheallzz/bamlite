@@ -74,30 +74,17 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     color: var(--theme-color1);
 }
 
-/* Fix Hero Email Overlap - Relocate to Bottom Right (Aligned with Social Icons) */
-.hero-bottom-info {
+/* Fix Hero Email - Position on Left Side */
+.banner-section .email-link {
     position: absolute;
-    right: 50px;
-    bottom: 70px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    left: 40px;
+    bottom: 120px;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
     z-index: 10;
 }
 
-.hero-bottom-info .email-link {
-    position: relative !important;
-    top: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    display: flex;
-    align-items: center;
-}
-
-.hero-bottom-info .email-link a {
-    transform: none !important;
+.banner-section .email-link a {
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -106,8 +93,19 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     white-space: nowrap;
 }
 
-.hero-bottom-info .email-link a:hover {
+.banner-section .email-link a:hover {
     color: var(--theme-color1);
+}
+
+/* Hero Social Icons - Position on Bottom Right */
+.hero-bottom-info {
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    z-index: 10;
 }
 
 .hero-bottom-info .follow-us {
@@ -127,8 +125,8 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
         right: 30px;
         gap: 20px;
     }
-    .hero-bottom-info .email-link {
-        display: none; /* Hide email on smaller screens to prevent crowding */
+    .banner-section .email-link {
+        left: 20px;
     }
 }
 
