@@ -121,6 +121,10 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
 }
 
 @media (max-width: 1199px) {
+    .main-header .header-lower {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
     .hero-bottom-info {
         right: 30px;
         gap: 20px;
@@ -179,6 +183,10 @@ html, body {
 
 /* Adjust mobile and tablet logo sizing for better fit */
 @media (max-width: 991px) {
+    .main-header .header-lower {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
     .main-header .logo img,
     .sticky-header .logo img,
     .mobile-menu .nav-logo img {
@@ -187,6 +195,10 @@ html, body {
 }
 
 @media (max-width: 767px) {
+    .main-header .header-lower {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
     .main-header .logo img,
     .sticky-header .logo img,
     .mobile-menu .nav-logo img {
@@ -195,6 +207,11 @@ html, body {
 }
 
 /* Right-align navigation menu in main header */
+.main-header .header-lower {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
 .main-header .main-box {
     display: flex !important;
     justify-content: space-between !important;
