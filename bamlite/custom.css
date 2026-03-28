@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6, .hero-label, .uk-navbar-nav > li > a {
 }
 
 .uk-list-bullet > li::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23b07d10%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ffffff%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20/%3E%3C/svg%3E");
 }
 
 /* Animations */
