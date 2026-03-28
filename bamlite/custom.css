@@ -264,6 +264,14 @@ h1, h2, h3, h4, h5, h6, .hero-label, .uk-navbar-nav > li > a {
     background: #000;
 }
 
+.footer-icon {
+    background: transparent !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
+}
+
 .about-section h3 {
     color: var(--accent-gold);
     border-bottom: 2px solid var(--accent-gold);

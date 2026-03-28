@@ -251,3 +251,12 @@ html, body {
 .mission-list-item .mission-list {
     text-align: center !important;
 }
+
+/* Remove circular background from footer icon */
+.footer-upper .footer-icon {
+    background: transparent !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
+}
