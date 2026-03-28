@@ -234,6 +234,20 @@ html, body {
 }
 
 /* Fix text touching top border in mission-list-item (The CTV Investment Gap section) */
+.mission-section .mission-list-item {
+    padding: 60px 0 !important;
+}
+
 .mission-list-item .sec-title h2 {
-    margin-top: 0 !important;
+    margin-top: 15px !important; /* Move away from top border */
+    margin-bottom: 20px !important;
+}
+
+.mission-list-item .sec-title p {
+    margin: 0 auto 30px !important;
+    text-align: center;
+}
+
+.mission-list-item .mission-list {
+    text-align: center !important;
 }
