@@ -248,11 +248,6 @@ html, body {
         font-size: 16px !important;
         line-height: 1.6 !important;
     }
-    .footer-title {
-        font-size: 40px !important;
-        line-height: 1.1 !important;
-    }
-
     /* Responsive Leadership images on About */
     .service_single_item .image-box {
         height: auto !important;
@@ -323,4 +318,25 @@ html, body {
     width: auto !important;
     height: auto !important;
     line-height: normal !important;
+}
+
+/* Fluid Footer Title */
+.footer-upper .footer-title {
+    font-size: clamp(35px, 7vw, 100px) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 20px !important;
+}
+
+@media (max-width: 767px) {
+    .footer-upper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .footer-upper .footer-icon {
+        margin-top: 10px !important;
+        margin-bottom: 40px !important;
+    }
 }
