@@ -183,26 +183,82 @@ html, body {
 
 /* Adjust mobile and tablet logo sizing for better fit */
 @media (max-width: 991px) {
-    .main-header .header-lower {
+    .main-header .header-lower,
+    .sticky-header .inner-container {
         padding-left: 30px !important;
         padding-right: 30px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
     .main-header .logo img,
     .sticky-header .logo img,
     .mobile-menu .nav-logo img {
-        max-height: 110px !important;
+        max-height: 100px !important;
+    }
+    .main-header .main-box,
+    .sticky-header .inner-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
     }
 }
 
 @media (max-width: 767px) {
-    .main-header .header-lower {
+    .main-header .header-lower,
+    .sticky-header .inner-container {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
     .main-header .logo img,
     .sticky-header .logo img,
     .mobile-menu .nav-logo img {
-        max-height: 80px !important;
+        max-height: 70px !important;
+    }
+    .mobile-nav-toggler {
+        margin-left: 0 !important;
+    }
+
+    /* Fix Banner/Hero overlap on mobile */
+    .banner-section, .page-title {
+        padding-top: 100px !important;
+    }
+    .banner-section .hero_upper {
+        margin-top: 0 !important;
+    }
+    .hero-subtitle {
+        font-size: 18px !important;
+    }
+
+    /* Standardize typography for mobile */
+    .sec-title h2, .hero_title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+    }
+    .sec-title .sub-title {
+        font-size: 14px !important;
+    }
+    p, .text-white {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+    .footer-title {
+        font-size: 40px !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Responsive Leadership images on About */
+    .service_single_item .image-box {
+        height: auto !important;
+        max-height: 350px !important;
+    }
+
+    /* Partners Section Mobile adjustments */
+    .partners-section .partner-logo img {
+        max-height: 35px !important;
+    }
+    .partners-section .partner-text h3 {
+        font-size: 18px !important;
     }
 }
 
