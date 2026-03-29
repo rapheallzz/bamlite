@@ -341,3 +341,18 @@ html, body {
         margin-bottom: 40px !important;
     }
 }
+
+/* Reduce vertical gaps between sections */
+.about-section {
+    padding-bottom: 50px !important;
+}
+
+@media (max-width: 991px) {
+    .about-section {
+        padding-bottom: 30px !important;
+    }
+}
+
+.mission-section {
+    padding-top: 0 !important;
+}
