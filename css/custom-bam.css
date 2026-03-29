@@ -185,8 +185,8 @@ html, body {
 @media (max-width: 991px) {
     .main-header .header-lower,
     .sticky-header .inner-container {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -202,13 +202,19 @@ html, body {
         justify-content: space-between !important;
         width: 100% !important;
     }
+    .main-header .logo-box {
+        min-width: 0 !important;
+    }
+    .main-header .nav-outer {
+        display: none !important;
+    }
 }
 
 @media (max-width: 767px) {
     .main-header .header-lower,
     .sticky-header .inner-container {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
     .main-header .logo img,
     .sticky-header .logo img,
@@ -263,9 +269,11 @@ html, body {
 }
 
 /* Right-align navigation menu in main header */
-.main-header .header-lower {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+@media (min-width: 1200px) {
+    .main-header .header-lower {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
 }
 
 .main-header .main-box {
