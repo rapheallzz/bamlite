@@ -18,14 +18,14 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
 
 .unified-logo:hover {
     opacity: 1;
-    filter: brightness(0) invert(88%) sepia(29%) saturate(718%) hue-rotate(339deg) brightness(101%) contrast(98%); /* Approximation of gold #fcdb66 */
+    filter: invert(51%) sepia(81%) saturate(614%) hue-rotate(4deg) brightness(92%) contrast(95%); /* Approximation of gold #b07d10 */
 }
 
 /* Custom stats styles */
 .bam-stat-box {
     padding: 30px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(252, 219, 102, 0.2);
+    border: 1px solid rgba(176, 125, 16, 0.2);
     border-radius: 15px;
     text-align: center;
 }

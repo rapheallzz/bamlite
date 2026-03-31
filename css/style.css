@@ -30,13 +30,13 @@ License: copyright commercial
   inherits: false;
 }
 :root {
-  --theme-color1: #fcdb66;
+  --theme-color1: #b07d10;
   --theme-color2: #000;
-  --theme-color3: #fee17c;
+  --theme-color3: #b07d10;
   --theme-color4: #0A0A0A;
-  --theme-color1-rgb: hexToRGB(#fcdb66);
+  --theme-color1-rgb: hexToRGB(#b07d10);
   --theme-color2-rgb: hexToRGB(#000);
-  --theme-color3-rgb: hexToRGB(#fee17c);
+  --theme-color3-rgb: hexToRGB(#b07d10);
   --theme-color4-rgb: hexToRGB(#0A0A0A);
   --theme-color1-text-color: #000000;
   --theme-color2-text-color: #fff;
@@ -8039,7 +8039,7 @@ Start sass Icon Single Box
   right: 0;
   width: 894px;
   height: 1px;
-  background-image: repeating-linear-gradient(to right, #fcdb66, #fcdb66 7px, transparent 4px, transparent 12px);
+  background-image: repeating-linear-gradient(to right, #b07d10, #b07d10 7px, transparent 4px, transparent 12px);
 }
 
 .process-single-box {
@@ -8057,7 +8057,7 @@ Start sass Icon Single Box
   left: 50%;
   width: 1.5px;
   height: 29px;
-  background-image: repeating-linear-gradient(to bottom, #fcdb66 0 6px, transparent 6px 12px);
+  background-image: repeating-linear-gradient(to bottom, #b07d10 0 6px, transparent 6px 12px);
 }
 .process-single-box .process-thumb {
   position: relative;
@@ -12222,9 +12222,9 @@ Progress Bar
 }
 .pricing-box-items-4 .pricing-header {
   border-bottom: 1px solid transparent;
-  -o-border-image: linear-gradient(90deg, #070707 0%, #FCDB66 51.92%, #070707 100%);
-     border-image: -webkit-gradient(linear, left top, right top, from(#070707), color-stop(51.92%, #FCDB66), to(#070707));
-     border-image: linear-gradient(90deg, #070707 0%, #FCDB66 51.92%, #070707 100%);
+  -o-border-image: linear-gradient(90deg, #070707 0%, #b07d10 51.92%, #070707 100%);
+     border-image: -webkit-gradient(linear, left top, right top, from(#070707), color-stop(51.92%, #b07d10), to(#070707));
+     border-image: linear-gradient(90deg, #070707 0%, #b07d10 51.92%, #070707 100%);
   padding-bottom: 30px;
   border-bottom: 1px solid transparent;
   border-image-slice: 1;
@@ -12594,7 +12594,7 @@ Progress Bar
       -ms-flex-align: center;
           align-items: center;
   gap: 18px;
-  border-right: 1px solid rgba(252, 219, 102, 0.17);
+  border-right: 1px solid rgba(176, 125, 16, 0.17);
   margin-right: 20px;
 }
 @media (max-width: 1199.98px) {
@@ -13787,7 +13787,7 @@ Progress Bar
 }
 .product-details .product-info .product-details__reveiw i {
   font-size: 16px;
-  color: #ffc737;
+  color: #b07d10;
 }
 .product-details .product-info .product-details__reveiw i + i {
   margin-left: 4px;
@@ -14130,7 +14130,7 @@ Progress Bar
   position: relative;
 }
 .product-discription .single-comment-box .inner-box .rating li {
-  color: #fdc009;
+  color: #b07d10;
   display: inline-block;
   font-size: 12px;
   float: left;
@@ -14214,7 +14214,7 @@ Progress Bar
   line-height: 28px;
   float: left;
   margin-right: 4px;
-  color: #fdc009;
+  color: #b07d10;
 }
 .product-discription .comment-box .review-box .rating li:last-child {
   margin: 0px !important;
@@ -14814,7 +14814,7 @@ Progress Bar
   -ms-flex-align: center;
   align-items: center;
   font-size: 14px;
-  color: #ffc737;
+  color: #b07d10;
 }
 
 .products-carousel .owl-nav {
@@ -15064,7 +15064,7 @@ Progress Bar
   -ms-flex-pack: center;
   justify-content: center;
   font-size: 14px;
-  color: #ffc737;
+  color: #b07d10;
 }
 
 .product-block .tag {
@@ -17510,7 +17510,7 @@ Sidebar
   text-shadow: 1px 0 0 rgba(14, 34, 7, 0.5);
 }
 .sidebar__category-list li a:hover span {
-  color: #ffcd1e;
+  color: #b07d10;
   -webkit-transform: translateY(-50%) scale(1);
   transform: translateY(-50%) scale(1);
 }
@@ -17546,7 +17546,7 @@ Sidebar
 .sidebar__category-list li.active a span {
   -webkit-transform: translateY(-50%) scale(1);
   transform: translateY(-50%) scale(1);
-  color: #ffcd1e;
+  color: #b07d10;
 }
 
 .sidebar__tags {
