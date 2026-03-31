@@ -356,3 +356,35 @@ html, body {
 .mission-section {
     padding-top: 0 !important;
 }
+
+/* Fix yellow background in contact-section on Report and Connect pages */
+.contact-section {
+    background-image: none !important;
+    background-color: #000 !important;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/main-home/bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%) brightness(0.5) sepia(1) hue-rotate(5deg) saturate(2); /* Tints the yellow image to gold/brown */
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.contact-section .contact-desc,
+.contact-section .contact-info p,
+.contact-section .contact-info h4 {
+    color: #fff !important;
+}
+
+.contact-section .sec-title .sub-title img {
+    filter: invert(53%) sepia(87%) saturate(415%) hue-rotate(1deg) brightness(92%) contrast(89%); /* Approx #b07d10 */
+}

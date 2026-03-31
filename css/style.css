@@ -1528,8 +1528,8 @@ button {
           transform: translateY(-4px);
 }
 .back-to-top-btn.two {
-  background: -webkit-gradient(linear, left top, right top, from(#fca528), color-stop(48.87%, #e22eab), to(#921fea));
-  background: linear-gradient(90deg, #fca528 0%, #e22eab 48.87%, #921fea 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#b07d10), color-stop(48.87%, #e22eab), to(#921fea));
+  background: linear-gradient(90deg, #b07d10 0%, #e22eab 48.87%, #921fea 100%);
 }
 
 .swiper-dot-2 .swiper-pagination-bullet {
