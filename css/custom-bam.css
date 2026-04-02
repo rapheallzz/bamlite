@@ -7,6 +7,24 @@
 
 h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     font-family: 'League Spartan', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.sec-title h2, .hero_title {
+    font-size: 48px !important;
+}
+
+.sec-title .sub-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Indent for "Approach" in bullet points */
+.list-style-two li .indent-text {
+    display: block;
+    padding-left: 35px;
 }
 
 /* Unified Logo Filter (Gold-ish White) */
@@ -319,6 +337,70 @@ html, body {
     width: auto !important;
     height: auto !important;
     line-height: normal !important;
+}
+
+/* Floating Download Button */
+.floating-download-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: none; /* Shown via JS on scroll */
+    transition: all 0.3s ease;
+}
+
+/* Report Modal Styles */
+.report-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.report-modal-content {
+    background-color: #111;
+    margin: 5% auto;
+    padding: 40px;
+    border: 1px solid var(--theme-color1);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.close-modal {
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--theme-color1);
+}
+
+/* Barbara Profile Pattern Background */
+.founder-card-bg {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/main-home/bg.png') !important;
+    background-size: cover !important;
+    border: 2px solid var(--theme-color1) !important;
+}
+
+/* Simple Divider */
+.simple-divider {
+    height: 1px;
+    background-color: var(--theme-color1);
+    width: 100px;
+    margin: 20px 0;
+    opacity: 0.5;
 }
 
 /* Fluid Footer Title */
