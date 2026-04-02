@@ -10,15 +10,16 @@ h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     font-weight: 700 !important;
 }
 
-.sec-title h2, .hero_title {
+.sec-title h2, .hero_title, .sub-headline {
     font-size: 48px !important;
 }
 
-.sec-title .sub-title {
+.sec-title .sub-title, .h2-headline {
     font-size: 18px !important;
     font-weight: 600 !important;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 10px !important;
 }
 
 /* Indent for "Approach" in bullet points */
