@@ -30,6 +30,27 @@ h2 {
     color: var(--theme-color1);
 }
 
+.sub-title-large {
+    font-size: 26px !important;
+    text-transform: none !important;
+    color: #fff !important;
+}
+
+.sub-title img {
+    filter: invert(51%) sepia(81%) saturate(614%) hue-rotate(4deg) brightness(92%) contrast(95%);
+}
+
+.mission-section-overlap {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.mission-section-gap {
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+}
+
 /* Unified Logo Filter (Gold-ish White) */
 .unified-logo {
     filter: brightness(0) invert(1);
