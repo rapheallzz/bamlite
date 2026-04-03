@@ -7,6 +7,27 @@
 
 h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     font-family: 'League Spartan', sans-serif !important;
+    font-weight: 800 !important;
+}
+
+h1, .hero_title {
+    font-size: 80px !important;
+}
+
+h2 {
+    font-size: 52px !important;
+}
+
+.sec-title h2 {
+    font-size: 48px !important;
+}
+
+.sub-title {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--theme-color1);
 }
 
 /* Unified Logo Filter (Gold-ish White) */
@@ -355,4 +376,122 @@ html, body {
 
 .mission-section {
     padding-top: 0 !important;
+}
+
+/* Founder Bio Card Dot Pattern */
+.founder-card {
+    background-image: radial-gradient(var(--theme-color1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: rgba(176, 125, 16, 0.05) !important;
+}
+
+/* Floating Download Button */
+.floating-download-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--theme-color1);
+    color: #fff !important;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.floating-download-btn:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    color: var(--theme-color1) !important;
+}
+
+/* Modal Popup Styles */
+.bam-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.bam-modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 40px;
+    border: 1px solid var(--theme-color1);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.bam-modal-close {
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bam-modal-close:hover {
+    color: var(--theme-color1);
+}
+
+/* Icon Box Style for Marketplace */
+.marketplace-icon-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #333;
+    padding: 30px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.marketplace-icon-box:hover {
+    border-color: var(--theme-color1);
+    transform: translateY(-10px);
+}
+
+.marketplace-icon-box .icon {
+    font-size: 40px;
+    color: var(--theme-color1);
+    margin-bottom: 20px;
+}
+
+.marketplace-icon-box h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Branded Yellow for specific links */
+.branded-yellow-link {
+    color: var(--theme-color1) !important;
+    font-weight: 700;
+    text-decoration: underline !important;
+}
+
+.branded-yellow-link:hover {
+    color: #fff !important;
+}
+
+.indent-approach {
+    display: inline-block;
+    margin-left: 20px;
 }
