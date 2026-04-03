@@ -16,7 +16,7 @@
 <body>
     <div class="page-wrapper">
         <!-- Floating Download Button -->
-        <a href="#download-section" class="floating-download-btn d-none d-md-flex">
+        <a href="javascript:void(0)" id="floating-open-modal-btn" class="floating-download-btn d-none d-md-flex">
             <i class="fa-solid fa-download"></i>
             Download Report
         </a>
@@ -453,10 +453,17 @@
             // Modal Logic
             const modal = document.getElementById("report-modal");
             const btn = document.getElementById("open-modal-btn");
+            const floatBtn = document.getElementById("floating-open-modal-btn");
             const span = document.getElementsByClassName("bam-modal-close")[0];
 
             if(btn) {
                 btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+            }
+
+            if(floatBtn) {
+                floatBtn.onclick = function() {
                     modal.style.display = "block";
                 }
             }
