@@ -270,7 +270,7 @@ html, body {
 
     /* Fix Banner/Hero overlap on mobile */
     .banner-section, .page-title {
-        padding-top: 100px !important;
+        padding-top: 130px !important;
     }
     .banner-section .hero_upper {
         margin-top: 0 !important;
@@ -381,6 +381,17 @@ html, body {
     .footer-upper .footer-icon {
         margin-top: 10px !important;
         margin-bottom: 40px !important;
+    }
+}
+
+/* Hero spacing and breathing room */
+.banner-section {
+    padding-top: 200px !important;
+}
+
+@media (max-width: 1199px) {
+    .banner-section {
+        padding-top: 180px !important;
     }
 }
 
