@@ -72,18 +72,183 @@ h2 {
     text-align: center;
 }
 
-.bam-stat-number {
-    font-size: 48px;
+/* CTV Investment Gap Section Enhancements */
+.ctv-gap-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: visible;
+}
+
+.ctv-content-box {
+    position: relative;
+    z-index: 5;
+}
+
+/* Modern Stat Blocks */
+.bam-stat-modern {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(176, 125, 16, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bam-stat-modern:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--theme-color1);
+    box-shadow: 0 20px 40px rgba(176, 125, 16, 0.1);
+}
+
+/* Progress Ring */
+.stat-visual-wrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.stat-value-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bam-stat-number-small {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--theme-color1);
+}
+
+.bam-stat-number-large {
+    font-size: 64px;
     font-weight: 800;
     color: var(--theme-color1);
     display: block;
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
-.bam-stat-label {
-    font-size: 14px;
+.bam-stat-number-medium {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--theme-color1);
+    line-height: 1;
+}
+
+/* Visual Container with Overlaps */
+.ctv-visual-container {
+    position: relative;
+    padding: 40px;
+}
+
+.ctv-image-wrapper {
+    position: relative;
+    z-index: 1;
+    /* Unique Hexagonal/Modern Clip Path */
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.ctv-main-img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.image-overlay-glow {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    background: radial-gradient(circle, rgba(176, 125, 16, 0.15) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Floating Stat Card */
+.ctv-floating-stat {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    max-width: 400px;
+}
+
+.glass-card {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(176, 125, 16, 0.3);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+/* Comparison Bar */
+.comparison-bar-container {
+    width: 100%;
+}
+
+.comparison-bar-main {
+    height: 12px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.comparison-bar-fill {
+    height: 100%;
+    background: var(--theme-color1);
+    border-radius: 6px;
+    width: 0; /* Animated via GSAP */
+    box-shadow: 0 0 15px var(--theme-color1);
+}
+
+.tiny-text {
+    font-size: 11px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.letter-spacing-1 {
     letter-spacing: 1px;
-    color: #fff;
+}
+
+/* Responsive Overrides for CTV Section */
+@media (max-width: 991px) {
+    .ctv-visual-container {
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .ctv-floating-stat {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: -40px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .ctv-image-wrapper {
+        clip-path: none; /* simpler on mobile */
+    }
+
+    .bam-stat-number-large {
+        font-size: 48px;
+    }
 }
 
 /* Pillar Cards */
