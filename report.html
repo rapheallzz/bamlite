@@ -137,11 +137,14 @@
                             <p>A 59-page research report exploring how diaspora audiences influence global media consumption, streaming behavior, and cultural momentum across the United States, the Caribbean, Europe, and Africa.</p>
                             <p>Produced by Békwu Insights, the report examines how migration, identity, and digital platforms have created a cross-border ecosystem of cultural production and attention.</p>
 
-                            <div class="btn-box mt-4">
+                            <div class="btn-box mt-4 d-flex flex-wrap gap-3 align-items-center">
                                 <button id="open-modal-btn" class="theme-btn-main">
                                     <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
                                     <span class="theme-btn theme-bg theme-color-white">Download the Report</span>
                                     <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+                                </button>
+                                <button id="open-briefing-modal-btn" class="theme-btn-white-border">
+                                    Request a Briefing
                                 </button>
                             </div>
                         </div>
@@ -400,43 +403,162 @@
         <div class="bam-modal-content">
             <span class="bam-modal-close">&times;</span>
             <div class="contact-forms">
-                <h2 class="service-info__badge">Research Download</h2>
+                <h2>Download the Report</h2>
+                <p class="text-white opacity-75 mb-4">Join media leaders exploring the Global Black Diaspora attention economy.</p>
+                <div class="p-3 mb-4 rounded" style="border: 1px solid #333;">
+                    <p class="text-white mb-0 small">Access: <strong>The Global Black Diaspora: Culture, Streaming, and the New Attention Economy.</strong></p>
+                </div>
                 <form id="modal-download-form" method="post">
-                    <div class="row">
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="firstName" placeholder="First Name *" required>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label>First Name *</label>
+                            <input type="text" name="firstName" class="form-control" required>
                         </div>
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="lastName" placeholder="Last Name *" required>
+                        <div class="col-sm-6">
+                            <label>Last Name *</label>
+                            <input type="text" name="lastName" class="form-control" required>
                         </div>
-                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <input type="email" name="email" placeholder="Email Address *" required>
+                        <div class="col-12 mt-3">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" class="form-control" required>
                         </div>
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="company" placeholder="Company">
+                        <div class="col-sm-6 mt-3">
+                            <label>Company</label>
+                            <input type="text" name="company" class="form-control">
                         </div>
-                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" name="role" placeholder="Role / Title">
+                        <div class="col-sm-6 mt-3">
+                            <label>Role / Title</label>
+                            <input type="text" name="role" class="form-control">
                         </div>
-                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <select name="industry" style="width: 100%; background: #1a1a1a; color: #fff; border: 1px solid #333; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                        <div class="col-12 mt-3">
+                            <label>Industry</label>
+                            <select name="industry">
                                 <option value="">Select Industry...</option>
                                 <option>Brand / Advertiser</option>
                                 <option>Media Company / Network</option>
                                 <option>Streaming Platform</option>
                                 <option>Advertising Agency</option>
+                                <option>Investment / Finance</option>
+                                <option>Research / Analytics</option>
+                                <option>Production Company / Studio</option>
+                                <option>Independent Creator</option>
                                 <option>Other</option>
                             </select>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-12 mt-3">
+                            <label>Area of Interest</label>
+                            <select name="interest">
+                                <option value="">Select Interest...</option>
+                                <option>Advertising & Brand Strategy</option>
+                                <option>Streaming / Platform Strategy</option>
+                                <option>Diaspora Media & Cultural Trends</option>
+                                <option>Investment Opportunities</option>
+                                <option>Content Production & Distribution</option>
+                                <option>Academic / Research</option>
+                                <option>General Interest</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-12 mt-4">
                             <button type="submit" class="theme-btn-main w-100">
                                 <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
                                 <span class="theme-btn theme-bg theme-color-white">Access Report</span>
                                 <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
                             </button>
                         </div>
+                        <div class="col-12 text-center mt-3">
+                            <p class="small text-white opacity-50">Your information will only be used for research updates and insights from Békwu Consults.</p>
+                        </div>
                     </div>
                 </form>
+                <div id="modal-thank-you" style="display:none;" class="text-center py-5">
+                    <div class="mb-4">
+                        <i class="fa fa-check-circle fa-4x" style="color: var(--theme-color1);"></i>
+                    </div>
+                    <h3 class="text-white">Thank You.</h3>
+                    <p class="text-white">Your research download will begin shortly.</p>
+                    <p class="small text-white opacity-50">Check your downloads folder or <a href="javascript:void(0)" id="manual-download-btn" class="theme-gold-text">click here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Briefing Modal -->
+    <div id="briefing-modal" class="bam-modal">
+        <div class="bam-modal-content">
+            <span class="bam-modal-close" id="briefing-modal-close">&times;</span>
+            <div class="contact-forms">
+                <h2>Request an Executive Briefing</h2>
+                <p class="text-white opacity-75 mb-4">Schedule a research briefing or strategy discussion based on insights from <strong>The Global Black Diaspora: Culture, Streaming, and the New Attention Economy.</strong></p>
+
+                <form id="briefing-form" method="post">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label>First Name *</label>
+                            <input type="text" name="firstName" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Last Name *</label>
+                            <input type="text" name="lastName" class="form-control" required>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            <label>Company / Organization</label>
+                            <input type="text" name="company" class="form-control">
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            <label>Role / Title</label>
+                            <input type="text" name="role" class="form-control">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label>Organization Type</label>
+                            <select name="orgType">
+                                <option value="">Select type...</option>
+                                <option>Brand / Advertiser</option>
+                                <option>Media Company / Network</option>
+                                <option>Streaming Platform</option>
+                                <option>Advertising Agency</option>
+                                <option>Investment / Finance</option>
+                                <option>Research / Analytics</option>
+                                <option>Production Company / Studio</option>
+                                <option>Independent Creator</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label>Type of Inquiry</label>
+                            <select name="inquiryType">
+                                <option value="">Select inquiry...</option>
+                                <option>Executive briefing on the report</option>
+                                <option>Strategy discussion</option>
+                                <option>Speaking engagement</option>
+                                <option>Research collaboration</option>
+                                <option>Consulting inquiry</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label>Tell us briefly about your interest.</label>
+                            <textarea name="message" rows="3" class="form-control" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                            <button type="submit" class="theme-btn-main w-100">
+                                <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
+                                <span class="theme-btn theme-bg theme-color-white">Submit Request</span>
+                                <span class="theme-btn-arrow-right theme-bg theme-color-white"><i class="fa-solid fa-arrow-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div id="briefing-thank-you" style="display:none;" class="text-center py-5">
+                    <div class="mb-4">
+                        <i class="fa fa-check-circle fa-4x" style="color: var(--theme-color1);"></i>
+                    </div>
+                    <h3 class="text-white">Request Received.</h3>
+                    <p class="text-white">Thank you for your interest. A member of our team will be in touch shortly.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -450,48 +572,43 @@
     <script src="js/script.js"></script>
     <script>
         $(document).ready(function() {
-            // Modal Logic
-            const modal = document.getElementById("report-modal");
-            const btn = document.getElementById("open-modal-btn");
-            const floatBtn = document.getElementById("floating-open-modal-btn");
-            const span = document.getElementsByClassName("bam-modal-close")[0];
+            // Modal Elements
+            const downloadModal = document.getElementById("report-modal");
+            const briefingModal = document.getElementById("briefing-modal");
 
-            if(btn) {
-                btn.onclick = function() {
-                    modal.style.display = "block";
-                }
-            }
+            // Buttons
+            const openDownloadBtn = document.getElementById("open-modal-btn");
+            const openBriefingBtn = document.getElementById("open-briefing-modal-btn");
+            const floatDownloadBtn = document.getElementById("floating-open-modal-btn");
 
-            if(floatBtn) {
-                floatBtn.onclick = function() {
-                    modal.style.display = "block";
-                }
-            }
+            // Close spans
+            const closeDownload = downloadModal.querySelector(".bam-modal-close");
+            const closeBriefing = document.getElementById("briefing-modal-close");
 
-            if(span) {
-                span.onclick = function() {
-                    modal.style.display = "none";
-                }
-            }
+            // Open logic
+            if(openDownloadBtn) openDownloadBtn.onclick = () => downloadModal.style.display = "block";
+            if(floatDownloadBtn) floatDownloadBtn.onclick = () => downloadModal.style.display = "block";
+            if(openBriefingBtn) openBriefingBtn.onclick = () => briefingModal.style.display = "block";
+
+            // Close logic
+            if(closeDownload) closeDownload.onclick = () => downloadModal.style.display = "none";
+            if(closeBriefing) closeBriefing.onclick = () => briefingModal.style.display = "none";
 
             window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
+                if (event.target == downloadModal) downloadModal.style.display = "none";
+                if (event.target == briefingModal) briefingModal.style.display = "none";
             }
 
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLFS5KUUReSXVdp_wSKkfkATNkLWhsENxJJ19Gk12HDUkSKc1LIdhshVKpO5A-52uZrA/exec';
 
-            $('#download-form, #modal-download-form').on('submit', function(e) {
-                e.preventDefault();
-                const $form = $(this);
+            function handleFormSubmit($form, type, successCallback) {
                 const $btn = $form.find('button');
                 $btn.prop('disabled', true).css('opacity', '0.5');
 
-                const formData = new FormData(this);
+                const formData = new FormData($form[0]);
                 const data = Object.fromEntries(formData.entries());
                 data.timestamp = new Date().toISOString();
-                data.type = "download";
+                data.type = type;
 
                 fetch(SCRIPT_URL, {
                     method: 'POST',
@@ -501,25 +618,53 @@
                     body: JSON.stringify(data),
                 }).then(() => {
                     $form.fadeOut(function() {
-                        if($form.attr('id') === 'modal-download-form') {
-                            $('.bam-modal-content').html('<div class="text-center py-5"><h3 class="text-white">Thank You.</h3><p class="text-white">Your research download will begin shortly.</p></div>');
-                            setTimeout(() => { modal.style.display = "none"; }, 3000);
-                        } else {
-                            $('#form-message').fadeIn();
-                        }
-                        triggerDownload();
+                        successCallback();
                     });
                 }).catch(err => {
                     console.error('Error:', err);
                     $form.fadeOut(function() {
-                        if($form.attr('id') === 'modal-download-form') {
-                            $('.bam-modal-content').html('<div class="text-center py-5"><h3 class="text-white">Thank You.</h3><p class="text-white">Your research download will begin shortly.</p></div>');
-                            setTimeout(() => { modal.style.display = "none"; }, 3000);
-                        } else {
-                            $('#form-message').fadeIn();
-                        }
-                        triggerDownload();
+                        successCallback();
                     });
+                });
+            }
+
+            // Download Form Submission
+            $('#modal-download-form').on('submit', function(e) {
+                e.preventDefault();
+                handleFormSubmit($(this), "download", function() {
+                    $('#modal-thank-you').fadeIn();
+                    triggerDownload();
+                    setTimeout(() => {
+                        downloadModal.style.display = "none";
+                        // Reset form and view for next time
+                        $('#modal-download-form').show();
+                        $('#modal-thank-you').hide();
+                        $('#modal-download-form')[0].reset();
+                    }, 5000);
+                });
+            });
+
+            // Footer Download Form Submission
+            $('#download-form').on('submit', function(e) {
+                e.preventDefault();
+                handleFormSubmit($(this), "download", function() {
+                    $('#form-message').fadeIn();
+                    triggerDownload();
+                });
+            });
+
+            // Briefing Form Submission
+            $('#briefing-form').on('submit', function(e) {
+                e.preventDefault();
+                handleFormSubmit($(this), "briefing_request", function() {
+                    $('#briefing-thank-you').fadeIn();
+                    setTimeout(() => {
+                        briefingModal.style.display = "none";
+                        // Reset form and view for next time
+                        $('#briefing-form').show();
+                        $('#briefing-thank-you').hide();
+                        $('#briefing-form')[0].reset();
+                    }, 5000);
                 });
             });
 
@@ -531,6 +676,8 @@
                 a.click();
                 document.body.removeChild(a);
             }
+
+            $('#manual-download-btn').on('click', triggerDownload);
         });
     </script>
 </body>
