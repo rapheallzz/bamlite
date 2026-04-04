@@ -306,7 +306,23 @@
                             <option>Media Company / Network</option>
                             <option>Streaming Platform</option>
                             <option>Advertising Agency</option>
+                            <option>Investment / Finance</option>
+                            <option>Research / Analytics</option>
+                            <option>Production Company / Studio</option>
+                            <option>Independent Creator</option>
                             <option>Other</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <select name="interest" style="width: 100%; background: #1a1a1a; color: #fff; border: 1px solid #333; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <option value="">Select Area of Interest...</option>
+                            <option>Advertising & Brand Strategy</option>
+                            <option>Streaming / Platform Strategy</option>
+                            <option>Diaspora Media & Cultural Trends</option>
+                            <option>Investment Opportunities</option>
+                            <option>Content Production & Distribution</option>
+                            <option>Academic / Research</option>
+                            <option>General Interest</option>
                         </select>
                       </div>
                       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -400,38 +416,32 @@
 
     <!-- Report Modal -->
     <div id="report-modal" class="bam-modal">
-        <div class="bam-modal-content">
+        <div class="bam-modal-content-styled">
             <span class="bam-modal-close">&times;</span>
-            <div class="contact-forms">
-                <h2>Download the Report</h2>
-                <p class="text-white opacity-75 mb-4">Join media leaders exploring the Global Black Diaspora attention economy.</p>
-                <div class="p-3 mb-4 rounded" style="border: 1px solid #333;">
-                    <p class="text-white mb-0 small">Access: <strong>The Global Black Diaspora: Culture, Streaming, and the New Attention Economy.</strong></p>
+            <div class="contact-forms contact-forms-modal">
+                <div class="modal-form-header mb-4">
+                  <h2 class="service-info__badge mb-2">Research Download</h2>
+                  <h3 class="text-white mb-0">Download the 2026 Edition Report</h3>
                 </div>
+
                 <form id="modal-download-form" method="post">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <label>First Name *</label>
-                            <input type="text" name="firstName" class="form-control" required>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="firstName" placeholder="First Name *" required>
                         </div>
-                        <div class="col-sm-6">
-                            <label>Last Name *</label>
-                            <input type="text" name="lastName" class="form-control" required>
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="lastName" placeholder="Last Name *" required>
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Email Address *</label>
-                            <input type="email" name="email" class="form-control" required>
+                        <div class="form-group col-12">
+                            <input type="email" name="email" placeholder="Email Address *" required>
                         </div>
-                        <div class="col-sm-6 mt-3">
-                            <label>Company</label>
-                            <input type="text" name="company" class="form-control">
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="company" placeholder="Company">
                         </div>
-                        <div class="col-sm-6 mt-3">
-                            <label>Role / Title</label>
-                            <input type="text" name="role" class="form-control">
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="role" placeholder="Role / Title">
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Industry</label>
+                        <div class="form-group col-12">
                             <select name="industry">
                                 <option value="">Select Industry...</option>
                                 <option>Brand / Advertiser</option>
@@ -445,10 +455,9 @@
                                 <option>Other</option>
                             </select>
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Area of Interest</label>
+                        <div class="form-group col-12">
                             <select name="interest">
-                                <option value="">Select Interest...</option>
+                                <option value="">Select Area of Interest...</option>
                                 <option>Advertising & Brand Strategy</option>
                                 <option>Streaming / Platform Strategy</option>
                                 <option>Diaspora Media & Cultural Trends</option>
@@ -458,7 +467,7 @@
                                 <option>General Interest</option>
                             </select>
                         </div>
-                        <div class="col-lg-12 mt-4">
+                        <div class="col-lg-12 mt-2">
                             <button type="submit" class="theme-btn-main w-100">
                                 <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
                                 <span class="theme-btn theme-bg theme-color-white">Access Report</span>
@@ -478,42 +487,39 @@
                     <p class="text-white">Your research download will begin shortly.</p>
                     <p class="small text-white opacity-50">Check your downloads folder or <a href="javascript:void(0)" id="manual-download-btn" class="theme-gold-text">click here</a>.</p>
                 </div>
+                <div class="contact-sps bounce-animate3"><img src="images/main-home/contact-sp.png" alt=""></div>
             </div>
         </div>
     </div>
 
     <!-- Briefing Modal -->
     <div id="briefing-modal" class="bam-modal">
-        <div class="bam-modal-content">
+        <div class="bam-modal-content-styled">
             <span class="bam-modal-close" id="briefing-modal-close">&times;</span>
-            <div class="contact-forms">
-                <h2>Request an Executive Briefing</h2>
-                <p class="text-white opacity-75 mb-4">Schedule a research briefing or strategy discussion based on insights from <strong>The Global Black Diaspora: Culture, Streaming, and the New Attention Economy.</strong></p>
+            <div class="contact-forms contact-forms-modal">
+                <div class="modal-form-header mb-4">
+                  <h2 class="service-info__badge mb-2">Strategy Inquiry</h2>
+                  <h3 class="text-white mb-0">Request an Executive Briefing</h3>
+                </div>
 
                 <form id="briefing-form" method="post">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <label>First Name *</label>
-                            <input type="text" name="firstName" class="form-control" required>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="firstName" placeholder="First Name *" required>
                         </div>
-                        <div class="col-sm-6">
-                            <label>Last Name *</label>
-                            <input type="text" name="lastName" class="form-control" required>
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="lastName" placeholder="Last Name *" required>
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Email Address *</label>
-                            <input type="email" name="email" class="form-control" required>
+                        <div class="form-group col-12">
+                            <input type="email" name="email" placeholder="Email Address *" required>
                         </div>
-                        <div class="col-sm-6 mt-3">
-                            <label>Company / Organization</label>
-                            <input type="text" name="company" class="form-control">
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="company" placeholder="Company / Organization">
                         </div>
-                        <div class="col-sm-6 mt-3">
-                            <label>Role / Title</label>
-                            <input type="text" name="role" class="form-control">
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="role" placeholder="Role / Title">
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Organization Type</label>
+                        <div class="form-group col-12">
                             <select name="orgType">
                                 <option value="">Select type...</option>
                                 <option>Brand / Advertiser</option>
@@ -527,8 +533,7 @@
                                 <option>Other</option>
                             </select>
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Type of Inquiry</label>
+                        <div class="form-group col-12">
                             <select name="inquiryType">
                                 <option value="">Select inquiry...</option>
                                 <option>Executive briefing on the report</option>
@@ -539,11 +544,10 @@
                                 <option>Other</option>
                             </select>
                         </div>
-                        <div class="col-12 mt-3">
-                            <label>Tell us briefly about your interest.</label>
-                            <textarea name="message" rows="3" class="form-control" placeholder="Your message..."></textarea>
+                        <div class="form-group col-12">
+                            <textarea name="message" rows="3" placeholder="Tell us briefly about your interest..."></textarea>
                         </div>
-                        <div class="col-lg-12 mt-4">
+                        <div class="col-lg-12 mt-2">
                             <button type="submit" class="theme-btn-main w-100">
                                 <span class="theme-btn-arrow-left theme-bg theme-color-white"><i class="fa-solid fa-arrow-left"></i></span>
                                 <span class="theme-btn theme-bg theme-color-white">Submit Request</span>
@@ -559,6 +563,7 @@
                     <h3 class="text-white">Request Received.</h3>
                     <p class="text-white">Thank you for your interest. A member of our team will be in touch shortly.</p>
                 </div>
+                <div class="contact-sps bounce-animate3"><img src="images/main-home/contact-sp.png" alt=""></div>
             </div>
         </div>
     </div>
