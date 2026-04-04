@@ -354,6 +354,11 @@ html, body {
     text-align: center !important;
 }
 
+/* Footer Widget Adjustments */
+.main-footer .about-widget .logo {
+    margin-bottom: 10px !important; /* Move description closer to logo */
+}
+
 /* Remove circular background from footer icon */
 .footer-upper .footer-icon {
     background: transparent !important;
@@ -390,6 +395,24 @@ html, body {
 
     .footer-bottom .copyright-text {
         margin-bottom: 10px;
+    }
+}
+
+.footer-bottom .inner-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap;
+}
+
+.footer-partnership-text {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .footer-partnership-text {
+        text-align: center;
+        width: 100%;
     }
 }
 
