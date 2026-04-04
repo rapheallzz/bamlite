@@ -252,39 +252,83 @@
       </section>
 
       <!-- Section 3: The CTV Investment Gap -->
-      <section class="mission-section mission-section-gap">
+      <section class="mission-section mission-section-gap ctv-gap-section">
         <div class="auto-container">
-          <div class="sec-title text-center mb-5">
-            <h2 class="text-white">The CTV Investment Gap</h2>
-          </div>
           <div class="row align-items-center">
-            <!-- Left Side -->
-            <div class="col-lg-4 col-md-12 wow fadeInLeft">
-                <div class="bam-stat-box p-4 count-box h-100" style="background: rgba(255,255,255,0.03); border: 1px solid var(--theme-color1); border-radius: 20px; text-align: center;">
-                    <p class="text-white mb-3" style="font-size: 18px; font-weight: 600;">Black Streamers Stream</p>
-                    <span class="bam-stat-number" style="font-size: 60px; line-height: 1;">+<span class="count-text" data-stop="44" data-speed="2000">0</span>%</span>
-                    <p class="text-white opacity-75 mt-3">Higher vs. the <br> General Population</p>
+            <!-- Left Content Area -->
+            <div class="col-lg-5 col-md-12">
+              <div class="ctv-content-box wow fadeInLeft">
+                <div class="sec-title mb-4">
+                  <h2 class="text-white mb-3">The CTV Investment Gap</h2>
+                  <p class="text-white opacity-75">Massive viewership growth vs. stagnant advertiser investment creates a unique opportunity for early movers.</p>
                 </div>
+
+                <!-- Stat 1: +44% Higher -->
+                <div class="bam-stat-modern count-box mb-5" data-aos="fade-up">
+                  <div class="d-flex align-items-center gap-4">
+                    <div class="stat-visual-wrap">
+                      <svg class="progress-ring" width="120" height="120" role="img" aria-label="44% higher consumption progress circle">
+                        <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        <circle class="progress-ring__circle" stroke="var(--theme-color1)" stroke-width="8" stroke-dasharray="326.7" stroke-dashoffset="326.7" fill="transparent" r="52" cx="60" cy="60" id="circle-progress-44"/>
+                      </svg>
+                      <div class="stat-value-overlay">
+                        <span class="bam-stat-number-small">+<span class="count-text" data-stop="44" data-speed="2000">0</span>%</span>
+                      </div>
+                    </div>
+                    <div class="stat-text">
+                      <h4 class="text-white mb-1">Higher Consumption</h4>
+                      <p class="text-white opacity-75 mb-0">Black streamers stream 44% more vs. general population.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stat 2: Spending Power -->
+                <div class="bam-stat-modern count-box" data-aos="fade-up" data-aos-delay="200">
+                  <div class="d-flex align-items-center gap-4">
+                    <div class="stat-icon-box">
+                      <i class="fa-solid fa-sack-dollar theme-gold-text" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="stat-text">
+                      <span class="bam-stat-number-large">$<span class="count-text" data-stop="2" data-speed="2000">0</span>T</span>
+                      <h4 class="text-white mb-0">U.S. Black Spending Power</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Visual -->
-            <div class="col-lg-4 col-md-12 wow fadeInUp my-4 my-lg-0">
-                <div class="image-box text-center">
-                    <img src="images/section_image-2.png" alt="Black People watching TV" class="rounded shadow-lg border border-gold" style="border-color: var(--theme-color1) !important; max-width: 100%;">
+            <!-- Right Visual Area -->
+            <div class="col-lg-7 col-md-12 mt-5 mt-lg-0">
+              <div class="ctv-visual-container">
+                <!-- Main Image with Clip Path -->
+                <div class="ctv-image-wrapper wow zoomIn" data-wow-delay="0.2s">
+                  <img src="images/section_image-2.png" alt="Black People watching TV" class="ctv-main-img">
+                  <div class="image-overlay-glow"></div>
                 </div>
-            </div>
 
-            <!-- Right Side -->
-            <div class="col-lg-4 col-md-12 wow fadeInRight">
-                <div class="bam-stat-box p-4 count-box mb-4" style="background: rgba(255,255,255,0.03); border: 1px solid var(--theme-color1); border-radius: 20px; text-align: center;">
-                    <p class="text-white mb-2" style="font-size: 18px; font-weight: 600;">Less Than</p>
-                    <span class="bam-stat-number" style="font-size: 60px; line-height: 1;">$<span class="count-text" data-stop="0.02" data-speed="2000" data-decimals="2">0.00</span></span>
-                    <p class="text-white opacity-75 mt-3">On Black Viewers for <br> Every $1 on CTV Spend</p>
+                <!-- Overlapping Stat: Less than $0.02 -->
+                <div class="ctv-floating-stat count-box wow fadeInRight" data-wow-delay="0.5s">
+                  <div class="glass-card p-4">
+                    <p class="text-white mb-2 small text-uppercase fw-bold letter-spacing-1">The Investment Disconnect</p>
+                    <div class="d-flex align-items-baseline gap-2 mb-3">
+                      <span class="bam-stat-number-medium">Less Than $<span class="count-text" data-stop="0.02" data-speed="2000" data-decimals="2">0.00</span></span>
+                    </div>
+
+                    <!-- Comparison Bar -->
+                    <div class="comparison-bar-container mb-3">
+                      <div class="comparison-bar-main" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" title="Total CTV Spend ($1.00)">
+                        <div class="comparison-bar-fill" id="spend-bar-fill" style="width: 2%;"></div>
+                      </div>
+                      <div class="d-flex justify-content-between mt-2">
+                        <span class="tiny-text opacity-50">Every $1.00 Spent</span>
+                        <span class="tiny-text theme-gold-text fw-bold">Actual Reach Spend</span>
+                      </div>
+                    </div>
+
+                    <p class="text-white opacity-75 mb-0 small">Allocated to Black viewers for every $1 spent on CTV.</p>
+                  </div>
                 </div>
-                <div class="bam-stat-box p-4 count-box" style="background: rgba(255,255,255,0.03); border: 1px solid var(--theme-color1); border-radius: 20px; text-align: center;">
-                    <span class="bam-stat-number" style="font-size: 60px; line-height: 1;">$<span class="count-text" data-stop="2" data-speed="2000">0</span>T</span>
-                    <p class="text-white mb-0" style="font-size: 18px; font-weight: 600;">U.S. Black <br> Spending Power</p>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -541,6 +585,7 @@
     <script src="js/gsap-scroll-to-plugin.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/custom-gsap.js"></script>
+    <script src="js/ctv-gap-animations.js"></script>
     <script src="js/script.js"></script>
   </body>
 
