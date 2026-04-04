@@ -382,6 +382,15 @@ html, body {
         margin-top: 10px !important;
         margin-bottom: 40px !important;
     }
+
+    .footer-bottom .inner-container {
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .footer-bottom .copyright-text {
+        margin-bottom: 10px;
+    }
 }
 
 /* Hero spacing and breathing room */
