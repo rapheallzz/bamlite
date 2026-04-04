@@ -527,3 +527,46 @@ html, body {
     display: inline-block;
     margin-left: 20px;
 }
+
+/* Standard Bullet List */
+.marketplace-icon-box .list-style-bullet {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 0;
+    margin: 20px 0 0 25px;
+}
+
+.marketplace-icon-box .list-style-bullet li {
+    display: list-item;
+    list-style-type: disc;
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Centered Icon Box List */
+.icon-box-list-centered {
+    padding: 0;
+    list-style: none;
+}
+
+.icon-box-list-centered li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-box-list-centered li .icon {
+    flex-shrink: 0;
+}
+
+.icon-box-list-centered li .content {
+    flex: 1;
+}
+
+.icon-box-list-centered li .content .title {
+    margin-bottom: 0 !important;
+    font-size: 20px;
+}
