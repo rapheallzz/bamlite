@@ -523,6 +523,29 @@ html, body {
     color: #fff !important;
 }
 
+.theme-gold-text {
+    color: var(--theme-color1) !important;
+}
+
+/* Report Page Layout Fixes */
+.report-insights-section {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 50px;
+}
+
+.report-mission-section {
+    position: relative;
+    z-index: 5;
+}
+
+@media (min-width: 992px) {
+    .report-mission-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
 .indent-approach {
     display: inline-block;
     margin-left: 20px;
