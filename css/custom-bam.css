@@ -634,10 +634,8 @@ html, body {
     padding-top: 0 !important;
 }
 
-/* Founder Bio Card Dot Pattern */
+/* Founder Bio Card Style */
 .founder-card {
-    background-image: radial-gradient(var(--theme-color1) 1px, transparent 1px);
-    background-size: 20px 20px;
     background-color: rgba(176, 125, 16, 0.05) !important;
 }
 
@@ -842,6 +840,23 @@ html, body {
 .indent-approach {
     display: inline-block;
     margin-left: 20px;
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-normal-yes {
+    font-weight: 500 !important;
+    font-size: 45px;
+}
+
+.text-title-case {
+    text-transform: capitalize !important;
 }
 
 /* Standard Bullet List */
