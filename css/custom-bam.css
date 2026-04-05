@@ -5,6 +5,7 @@
   --sec-title-font-family: 'League Spartan', sans-serif;
 }
 
+/* Global Typography */
 h1, h2, h3, h4, h5, h6, .title, .sec-title h2, .hero_title {
     font-family: 'League Spartan', sans-serif !important;
     font-weight: 800 !important;
@@ -235,49 +236,6 @@ h2 {
     width: 100%;
 }
 
-/* Responsive Overrides */
-@media (max-width: 1199px) {
-    .ctv-visual-main-wrapper {
-        max-width: 900px;
-    }
-    .ctv-floating-card {
-        max-width: 340px;
-    }
-    .ctv-card-bottom-left {
-        left: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .ctv-visual-main-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        min-height: auto;
-    }
-
-    .ctv-image-center-box {
-        width: 100%;
-        order: 1;
-    }
-
-    .ctv-floating-card {
-        position: relative !important;
-        top: auto !important;
-        bottom: auto !important;
-        left: auto !important;
-        right: auto !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        order: 2;
-    }
-
-    .ctv-image-wrapper {
-        clip-path: none;
-    }
-}
-
 /* Pillar Cards */
 .pillar-card {
     padding: 40px;
@@ -354,35 +312,15 @@ h2 {
     display: none !important;
 }
 
-@media (max-width: 1199px) {
-    .main-header .header-lower {
-        padding-left: 50px !important;
-        padding-right: 50px !important;
-    }
-    .hero-bottom-info {
-        right: 30px;
-        gap: 20px;
-    }
-    .banner-section .email-link {
-        left: 20px;
-    }
-}
-
-@media (max-width: 991px) {
-    .hero-bottom-info {
-        display: none; /* Hide everything if it still crowds on mobile */
-    }
-}
-
 /* Fix Global Horizontal Scroll */
 html, body {
-    overflow-x: clip; /* Prefer clip over hidden if supported, but hidden is safer for compatibility */
+    overflow-x: clip;
     position: relative;
     width: 100%;
 }
 
 .page-wrapper {
-    overflow: clip; /* Use clip to prevent horizontal scroll while allowing sticky elements to work if any */
+    overflow: clip;
 }
 
 /* Ensure no element accidentally causes overflow */
@@ -391,7 +329,7 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Re-allow overflow for specific elements that need it (like tooltips or absolute positioned deco if any) */
+/* Re-allow overflow for specific elements that need it */
 .container, .container-fluid, .row {
     max-width: none;
 }
@@ -399,7 +337,7 @@ html, body {
 /* Logo Sizing */
 .main-header .logo img,
 .sticky-header .logo img {
-    max-height: 150px !important; /* Larger logo globally as requested */
+    max-height: 150px !important;
     width: auto;
     transition: all 0.3s ease;
 }
@@ -415,97 +353,7 @@ html, body {
     padding: 5px 0;
 }
 
-/* Adjust mobile and tablet logo sizing for better fit */
-@media (max-width: 991px) {
-    .main-header .header-lower,
-    .sticky-header .inner-container {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
-    .main-header .logo img,
-    .sticky-header .logo img,
-    .mobile-menu .nav-logo img {
-        max-height: 100px !important;
-    }
-    .main-header .main-box,
-    .sticky-header .inner-container {
-        display: flex !important;
-        justify-content: space-between !important;
-        width: 100% !important;
-    }
-    .main-header .logo-box {
-        min-width: 0 !important;
-        flex: 1 !important;
-    }
-    .main-header .nav-outer {
-        display: none !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .main-header .header-lower,
-    .sticky-header .inner-container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-    .main-header .logo img,
-    .sticky-header .logo img,
-    .mobile-menu .nav-logo img {
-        max-height: 70px !important;
-    }
-    .mobile-nav-toggler {
-        margin-left: 0 !important;
-    }
-
-    /* Fix Banner/Hero overlap on mobile */
-    .banner-section, .page-title {
-        padding-top: 130px !important;
-    }
-    .banner-section .hero_upper {
-        margin-top: 0 !important;
-    }
-    .hero-subtitle {
-        font-size: 18px !important;
-    }
-
-    /* Standardize typography for mobile */
-    .sec-title h2, .hero_title {
-        font-size: 32px !important;
-        line-height: 1.2 !important;
-    }
-    .sec-title .sub-title {
-        font-size: 14px !important;
-    }
-    p, .text-white {
-        font-size: 16px !important;
-        line-height: 1.6 !important;
-    }
-    /* Responsive Leadership images on About */
-    .service_single_item .image-box {
-        height: auto !important;
-        max-height: 350px !important;
-    }
-
-    /* Partners Section Mobile adjustments */
-    .partners-section .partner-logo img {
-        max-height: 35px !important;
-    }
-    .partners-section .partner-text h3 {
-        font-size: 18px !important;
-    }
-}
-
-/* Right-align navigation menu in main header */
-@media (min-width: 1200px) {
-    .main-header .header-lower {
-        padding-left: 100px !important;
-        padding-right: 100px !important;
-    }
-}
-
+/* Navigation Layout */
 .main-header .main-box {
     display: flex !important;
     justify-content: space-between !important;
@@ -524,16 +372,16 @@ html, body {
 }
 
 .main-header .main-menu .navigation > li {
-    float: none !important; /* Override float-based layout */
+    float: none !important;
 }
 
-/* Fix text touching top border in mission-list-item (The CTV Investment Gap section) */
+/* Section Specific Fixes */
 .mission-section .mission-list-item {
     padding: 60px 0 !important;
 }
 
 .mission-list-item .sec-title h2 {
-    margin-top: 15px !important; /* Move away from top border */
+    margin-top: 15px !important;
     margin-bottom: 20px !important;
 }
 
@@ -548,10 +396,9 @@ html, body {
 
 /* Footer Widget Adjustments */
 .main-footer .about-widget .logo {
-    margin-bottom: 10px !important; /* Move description closer to logo */
+    margin-bottom: 10px !important;
 }
 
-/* Remove circular background from footer icon */
 .footer-upper .footer-icon {
     background: transparent !important;
     border-radius: 0 !important;
@@ -560,34 +407,10 @@ html, body {
     line-height: normal !important;
 }
 
-/* Fluid Footer Title */
 .footer-upper .footer-title {
     font-size: clamp(35px, 7vw, 100px) !important;
     line-height: 1.1 !important;
     margin-bottom: 20px !important;
-}
-
-@media (max-width: 767px) {
-    .footer-upper {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-    }
-
-    .footer-upper .footer-icon {
-        margin-top: 10px !important;
-        margin-bottom: 40px !important;
-    }
-
-    .footer-bottom .inner-container {
-        justify-content: center !important;
-        text-align: center;
-    }
-
-    .footer-bottom .copyright-text {
-        margin-bottom: 10px;
-    }
 }
 
 .footer-bottom .inner-container {
@@ -601,45 +424,24 @@ html, body {
     text-align: right;
 }
 
-@media (max-width: 767px) {
-    .footer-partnership-text {
-        text-align: center;
-        width: 100%;
-    }
-}
-
-/* Hero spacing and breathing room */
+/* Hero Spacing */
 .banner-section {
     padding-top: 200px !important;
 }
 
-@media (max-width: 1199px) {
-    .banner-section {
-        padding-top: 180px !important;
-    }
-}
-
-/* Reduce vertical gaps between sections */
 .about-section {
-    padding-bottom: 50px !important;
-}
-
-@media (max-width: 991px) {
-    .about-section {
-        padding-bottom: 30px !important;
-    }
+    padding-bottom: 80px !important;
 }
 
 .mission-section {
     padding-top: 0 !important;
 }
 
-/* Founder Bio Card Style */
+/* UI Components */
 .founder-card {
     background-color: rgba(176, 125, 16, 0.05) !important;
 }
 
-/* Floating Download Button */
 .floating-download-btn {
     position: fixed;
     bottom: 30px;
@@ -744,17 +546,6 @@ html, body {
     background-position: right 20px center !important;
 }
 
-@media (max-width: 767px) {
-    .bam-modal-content-styled {
-        padding: 50px 20px 30px;
-        margin: 10% auto;
-    }
-    .bam-modal-close {
-        right: 20px;
-        top: 15px;
-    }
-}
-
 .theme-btn-white-border {
     display: inline-flex;
     align-items: center;
@@ -774,7 +565,7 @@ html, body {
     color: #000 !important;
 }
 
-/* Icon Box Style for Marketplace */
+/* Marketplace Components */
 .marketplace-icon-box {
     background: rgba(255,255,255,0.03);
     border: 1px solid #333;
@@ -803,63 +594,6 @@ html, body {
     letter-spacing: 1px;
 }
 
-/* Branded Yellow for specific links */
-.branded-yellow-link {
-    color: var(--theme-color1) !important;
-    font-weight: 700;
-    text-decoration: underline !important;
-}
-
-.branded-yellow-link:hover {
-    color: #fff !important;
-}
-
-.theme-gold-text {
-    color: var(--theme-color1) !important;
-}
-
-/* Report Page Layout Fixes */
-.report-insights-section {
-    position: relative;
-    z-index: 5;
-    margin-bottom: 50px;
-}
-
-.report-mission-section {
-    position: relative;
-    z-index: 5;
-}
-
-@media (min-width: 992px) {
-    .report-mission-section {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-}
-
-.indent-approach {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.font-weight-light {
-    font-weight: 300 !important;
-}
-
-.font-weight-normal {
-    font-weight: 400 !important;
-}
-
-.font-weight-normal-yes {
-    font-weight: 500 !important;
-    font-size: 45px;
-}
-
-.text-title-case {
-    text-transform: capitalize !important;
-}
-
-/* Standard Bullet List */
 .marketplace-icon-box .list-style-bullet {
     list-style-type: disc;
     list-style-position: outside;
@@ -900,4 +634,295 @@ html, body {
 .icon-box-list-centered li .content .title {
     margin-bottom: 0 !important;
     font-size: 20px;
+}
+
+/* Utility Classes */
+.branded-yellow-link {
+    color: var(--theme-color1) !important;
+    font-weight: 700;
+    text-decoration: underline !important;
+}
+
+.branded-yellow-link:hover {
+    color: #fff !important;
+}
+
+.theme-gold-text {
+    color: var(--theme-color1) !important;
+}
+
+.report-insights-section {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 50px;
+}
+
+.report-mission-section {
+    position: relative;
+    z-index: 5;
+}
+
+.indent-approach {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-normal-yes {
+    font-weight: 500 !important;
+    font-size: 45px;
+}
+
+.text-title-case {
+    text-transform: capitalize !important;
+}
+
+/* Media Queries (Desktop/Tablet) */
+@media (min-width: 1200px) {
+    .main-header .header-lower {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .report-mission-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .ctv-visual-main-wrapper {
+        max-width: 900px;
+    }
+    .ctv-floating-card {
+        max-width: 340px;
+    }
+    .ctv-card-bottom-left {
+        left: 0;
+    }
+    .main-header .header-lower {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .hero-bottom-info {
+        right: 30px;
+        gap: 20px;
+    }
+    .banner-section .email-link {
+        left: 20px;
+    }
+    .banner-section {
+        padding-top: 180px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .ctv-visual-main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        min-height: auto;
+    }
+    .ctv-image-center-box {
+        width: 100%;
+        order: 1;
+    }
+    .ctv-floating-card {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        order: 2;
+    }
+    .ctv-image-wrapper {
+        clip-path: none;
+    }
+    .hero-bottom-info {
+        display: none;
+    }
+    .main-header .header-lower,
+    .sticky-header .inner-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    .main-header .logo img,
+    .sticky-header .logo img,
+    .mobile-menu .nav-logo img {
+        max-height: 100px !important;
+    }
+    .main-header .main-box,
+    .sticky-header .inner-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+    .main-header .logo-box {
+        min-width: 0 !important;
+        flex: 1 !important;
+    }
+    .main-header .nav-outer {
+        display: none !important;
+    }
+    .about-section {
+        padding-bottom: 60px !important;
+    }
+}
+
+/* Consolidated Mobile Media Query (max-width: 767px) */
+@media (max-width: 767px) {
+    /* Header & Logo */
+    .main-header .header-lower,
+    .sticky-header .inner-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .main-header .logo img,
+    .sticky-header .logo img,
+    .mobile-menu .nav-logo img {
+        max-height: 70px !important;
+    }
+    .mobile-nav-toggler {
+        margin-left: 0 !important;
+    }
+
+    /* Banner & Page Titles */
+    .banner-section, .page-title {
+        padding-top: 120px !important;
+        min-height: auto !important;
+    }
+    .banner-section .hero_upper {
+        margin-top: 0 !important;
+    }
+    .hero-subtitle {
+        font-size: 18px !important;
+    }
+
+    /* Standardized Spacing */
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+    .main-footer .widgets-section {
+        padding: 60px 0 30px !important;
+    }
+    .py-5 {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Responsive Typography */
+    h1, .hero_title, .page-title h1.title, .banner-section h1.title {
+        font-size: 38px !important;
+        line-height: 1.1 !important;
+    }
+    h2, .sec-title h2 {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+    }
+    h3 {
+        font-size: 28px !important;
+    }
+    .sec-title .sub-title {
+        font-size: 14px !important;
+    }
+    .sec-title .sub-title-large {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        margin-top: 10px !important;
+    }
+    p, .text-white {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Cards & Components */
+    .pillar-card {
+        padding: 30px 20px !important;
+        margin-bottom: 25px !important;
+    }
+    .founder-card {
+        padding: 30px 20px !important;
+    }
+    .founder-card h3 {
+        font-size: 32px !important;
+    }
+    .service_single_item .image-box {
+        height: auto !important;
+        max-height: 350px !important;
+    }
+    .process-single-box {
+        margin-bottom: 40px !important;
+        padding: 20px !important;
+    }
+    .process-single-box .process-thumb {
+        margin-bottom: 20px !important;
+    }
+    .marketplace-icon-box {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    .icon-box-list-centered li {
+        gap: 15px;
+        margin-bottom: 25px;
+        align-items: flex-start;
+    }
+    .icon-box-list-centered li .icon {
+        padding-top: 5px;
+    }
+
+    /* Modal Adjustments */
+    .bam-modal-content-styled {
+        padding: 50px 20px 30px;
+        margin: 10% auto;
+    }
+    .bam-modal-close {
+        right: 20px;
+        top: 15px;
+    }
+
+    /* Footer Adjustments */
+    .footer-upper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    .footer-upper .footer-icon {
+        margin-top: 10px !important;
+        margin-bottom: 40px !important;
+    }
+    .footer-bottom .inner-container {
+        justify-content: center !important;
+        text-align: center;
+    }
+    .footer-bottom .copyright-text {
+        margin-bottom: 10px;
+    }
+    .footer-partnership-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Partners Section */
+    .partners-section .partner-logo img {
+        max-height: 35px !important;
+    }
+    .partners-section .partner-text h3 {
+        font-size: 18px !important;
+    }
 }
