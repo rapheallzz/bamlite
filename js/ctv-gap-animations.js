@@ -16,6 +16,48 @@
     function initCTVAnimations() {
         gsap.registerPlugin(ScrollTrigger);
 
+        // 0. Number Counters Animation
+        const countTexts = gsap.utils.toArray('.ctv-floating-card .count-text');
+        countTexts.forEach((el) => {
+            let targetVal = 0;
+            let decimals = 0;
+            let prefix = "";
+            let suffix = "";
+
+            const stop = el.getAttribute('data-stop');
+            const dec = el.getAttribute('data-decimals');
+
+            if (stop) {
+                targetVal = parseFloat(stop);
+                decimals = dec ? parseInt(dec) : 0;
+            } else {
+                // Fallback for safety
+                const text = el.parentElement.innerText.trim();
+                if (text.includes("0.02")) {
+                    targetVal = 0.02;
+                    decimals = 2;
+                } else if (text.includes("44")) {
+                    targetVal = 44;
+                } else if (text.includes("2")) {
+                    targetVal = 2;
+                }
+            }
+
+            const obj = { value: 0 };
+            gsap.to(obj, {
+                scrollTrigger: {
+                    trigger: ".ctv-gap-section",
+                    start: "top 60%",
+                },
+                value: targetVal,
+                duration: 2,
+                ease: "power2.out",
+                onUpdate: () => {
+                    el.innerText = obj.value.toFixed(decimals);
+                }
+            });
+        });
+
         // 1. Comparison Bar Animation (<$0.02)
         const spendBar = document.getElementById('spend-bar-fill');
         if (spendBar) {
@@ -88,11 +130,11 @@
                     trigger: ".ctv-visual-main-wrapper",
                     start: "top 70%",
                 },
-                y: 100,
+                y: 50,
                 opacity: 0,
-                duration: 1.2,
+                duration: 1,
                 delay: 0.2 * i,
-                ease: "back.out(1.2)"
+                ease: "power2.out"
             });
 
             // Drift Animation
