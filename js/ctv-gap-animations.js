@@ -16,40 +16,14 @@
     function initCTVAnimations() {
         gsap.registerPlugin(ScrollTrigger);
 
-        // 1. Progress Ring Animation (+44%)
-        const circle = document.getElementById('circle-progress-44');
-        if (circle) {
-            const radius = circle.r.baseVal.value;
-            const circumference = 2 * Math.PI * radius;
-
-            // Set initial state
-            gsap.set(circle, {
-                strokeDasharray: circumference,
-                strokeDashoffset: circumference
-            });
-
-            ScrollTrigger.create({
-                trigger: ".ctv-gap-section",
-                start: "top 70%",
-                onEnter: () => {
-                    gsap.to(circle, {
-                        strokeDashoffset: circumference - (circumference * 0.44),
-                        duration: 2.5,
-                        ease: "power2.out"
-                    });
-                }
-            });
-        }
-
-        // 2. Comparison Bar Animation (<$0.02)
+        // 1. Comparison Bar Animation (<$0.02)
         const spendBar = document.getElementById('spend-bar-fill');
         if (spendBar) {
             gsap.set(spendBar, { width: 0 });
-
             gsap.to(spendBar, {
                 scrollTrigger: {
-                    trigger: ".ctv-floating-stat",
-                    start: "top 85%",
+                    trigger: ".ctv-gap-section",
+                    start: "top 60%",
                 },
                 width: "2%",
                 duration: 2,
@@ -57,7 +31,39 @@
             });
         }
 
-        // 3. Floating Image Parallax
+        // 2. Consumption Dual Bar Animation (+44%)
+        const consumptionBar = document.getElementById('consumption-bar-fill');
+        if (consumptionBar) {
+            gsap.set(consumptionBar, { width: 0 });
+            gsap.to(consumptionBar, {
+                scrollTrigger: {
+                    trigger: ".ctv-gap-section",
+                    start: "top 60%",
+                },
+                width: "100%", // Represents the 144% relative to gen pop 100%
+                duration: 2.5,
+                delay: 0.3,
+                ease: "power2.out"
+            });
+        }
+
+        // 3. Power Meter Animation ($2T)
+        const powerMeter = document.getElementById('power-meter-fill');
+        if (powerMeter) {
+            gsap.set(powerMeter, { strokeDashoffset: 126 });
+            gsap.to(powerMeter, {
+                scrollTrigger: {
+                    trigger: ".ctv-gap-section",
+                    start: "top 60%",
+                },
+                strokeDashoffset: 0,
+                duration: 2.5,
+                delay: 0.6,
+                ease: "power2.inOut"
+            });
+        }
+
+        // 4. Central Image Parallax
         const ctvImage = document.querySelector('.ctv-main-img');
         if (ctvImage) {
             gsap.to(ctvImage, {
@@ -67,52 +73,39 @@
                     end: "bottom top",
                     scrub: 1
                 },
-                y: -50,
-                rotate: 2,
+                y: -40,
+                scale: 1.05,
                 ease: "none"
             });
         }
 
-        // 4. Content Entrance Stagger
-        const ctvStats = gsap.utils.toArray('.bam-stat-modern');
-        if (ctvStats.length) {
-            gsap.from(ctvStats, {
+        // 5. Floating Cards Entrance & Drift
+        const cards = gsap.utils.toArray('.ctv-floating-card');
+        cards.forEach((card, i) => {
+            // Entrance
+            gsap.from(card, {
                 scrollTrigger: {
-                    trigger: ".ctv-content-box",
-                    start: "top 80%",
+                    trigger: ".ctv-visual-main-wrapper",
+                    start: "top 70%",
                 },
-                y: 60,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.3,
-                ease: "back.out(1.7)"
-            });
-        }
-
-        // 5. Floating Stat Card Entrance
-        const floatingCard = document.querySelector('.ctv-floating-stat');
-        if (floatingCard) {
-            gsap.from(floatingCard, {
-                scrollTrigger: {
-                    trigger: ".ctv-visual-container",
-                    start: "top 60%",
-                },
-                x: 100,
+                y: 100,
                 opacity: 0,
                 duration: 1.2,
-                delay: 0.5,
-                ease: "power3.out"
+                delay: 0.2 * i,
+                ease: "back.out(1.2)"
             });
 
-            // Add a continuous floating effect
-            gsap.to(floatingCard, {
-                y: "-=15",
-                duration: 3,
+            // Drift Animation
+            gsap.to(card, {
+                y: i % 2 === 0 ? "-=20" : "+=15",
+                x: i % 2 === 0 ? "+=10" : "-=10",
+                duration: 3 + i,
                 repeat: -1,
                 yoyo: true,
-                ease: "sine.inOut"
+                ease: "sine.inOut",
+                delay: i * 0.5
             });
-        }
+        });
 
         // 6. Section Background Glow Pulse
         const glow = document.querySelector('.image-overlay-glow');
