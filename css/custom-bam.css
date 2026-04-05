@@ -133,12 +133,12 @@ h2 {
 }
 
 .ctv-card-bottom-left {
-    bottom: 0;
+    top: 60px;
     left: -40px;
 }
 
 .ctv-card-bottom-right {
-    bottom: -10px;
+    bottom: 80px;
     right: 20px;
     max-width: 320px;
 }
