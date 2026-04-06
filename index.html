@@ -207,7 +207,7 @@
       <!-- Banner Section -->
       <section class="banner-section d-flex align-items-center" style="position: relative; background: #000;">
         <div class="hero-video-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.4;">
-            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;" aria-label="Media Buying for Black Viewers Hero Video">
+            <video id="heroVideo" autoplay muted loop playsinline preload="auto" style="width: 100%; height: 100%; object-fit: cover;" aria-label="Media Buying for Black Viewers Hero Video">
                 <source src="images/hero_banner.mp4" type="video/mp4">
             </video>
         </div>
@@ -630,6 +630,32 @@
     <script src="js/custom-gsap.js"></script>
     <script src="js/ctv-gap-animations.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('heroVideo');
+        if (video) {
+          // Attempt to play the video explicitly
+          var playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.then(_ => {
+              // Autoplay started!
+            }).catch(error => {
+              // Autoplay was prevented. Show a "Play" button or handle it.
+              console.log("Autoplay was prevented, trying again on user interaction.");
+
+              // Fallback: try to play once on first user interaction if it failed
+              var playVideoOnInteraction = function() {
+                  video.play();
+                  document.removeEventListener('touchstart', playVideoOnInteraction);
+                  document.removeEventListener('click', playVideoOnInteraction);
+              };
+              document.addEventListener('touchstart', playVideoOnInteraction);
+              document.addEventListener('click', playVideoOnInteraction);
+            });
+          }
+        }
+      });
+    </script>
   </body>
 
 <!-- Mirrored from html.kodesolution.com/2025/nexella-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Mar 2026 17:26:14 GMT -->

@@ -437,6 +437,21 @@ html, body {
     padding-top: 0 !important;
 }
 
+/* Hero Video Mobile Fix */
+@media (max-width: 767px) {
+    .banner-section {
+        background: #000 !important;
+    }
+    .hero-video-placeholder {
+        opacity: 0.6 !important; /* Slightly higher opacity for better visibility on mobile */
+    }
+    #heroVideo {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
 /* UI Components */
 .founder-card {
     background-color: rgba(176, 125, 16, 0.05) !important;
