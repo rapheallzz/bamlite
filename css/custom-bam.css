@@ -846,8 +846,11 @@ html, body {
         line-height: 1.1 !important;
     }
     h2, .sec-title h2 {
-        font-size: 32px !important;
+        font-size: 28px !important;
         line-height: 1.2 !important;
+    }
+    .word {
+        white-space: nowrap !important;
     }
     h3 {
         font-size: 28px !important;
