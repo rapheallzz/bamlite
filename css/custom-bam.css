@@ -794,6 +794,9 @@ html, body {
     .main-header .nav-outer {
         display: none !important;
     }
+    .sticky-header .nav-outer {
+        display: block !important;
+    }
     .about-section {
         padding-bottom: 60px !important;
     }
